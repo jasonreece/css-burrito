@@ -1,4 +1,5 @@
-#An organizational Sass Template.  
+#Burrito - 
+#An organizational Sass Template. 
 
 This template pulls heavily from the following CSS Architectures:  
 
@@ -18,15 +19,15 @@ It's simple, just delete your current stylesheets directory (or whatever the fol
 Any new .scss files that are created by generating Rails controls will not be used, and can be deleted.
 
 ##Whats in the template, and how do I use it?
-There are four main sections to this Template.  **Application.css.scss**, **Libs**, **Core**, and **Modules**.
+There are four main sections in this Template.  **Application.css.scss**, **Libs**, **Core**, and **Modules**.
 
-####**Application.css.scss** - 
+####**Application.css.scss**
 - This section serves three purposes.  
-* It imports all of the files from the **Core** and **Module** sections.  
+* It imports all of the files from the **Libs**, **Core** and **Module** sections.  
 * It has an **Inbox** section where developers that don't usually work on the project can leave temporary files that are easily seen by the maintainers of the project
 * It has a **Shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later.
 
-#### **Libs** -  
+#### **Libs**
 This section will house CSS libraries like **Bootstrap**, **Foundation**, or **Pure**.  
 It also contains a **library-variable-overrides** file.  Be sure to make any library variable changes here.
   
@@ -38,7 +39,7 @@ It also contains a **library-variable-overrides** file.  Be sure to make any lib
 * **Typography** - Base-level typography (colors, fonts).
 * **Layouts** - Base-level layout (margin, padding, sizing).  
 
-**Modules** -  
+**Modules**  
 Any unit of style that can be found across multiple pages (Buttons, Navigations, Modals).  
 **Most of your styles should be found here.**  
 
@@ -51,14 +52,14 @@ Any unit of style that can be found across multiple pages (Buttons, Navigations,
 
 ##Suggested Styleguide
 
-####General Styling - 
+####General Styling  
 * Avoid using ID's.  Use classes instead.
 * All CSS class names should use dashes instead of underscores or camel case.
 * Each indentation level is made up of two spaces. Avoid using tabs.
 * Do not over-qualify class name selectors with an element type unless you are specifying exceptions to the default styling of a particular class.
 * Use one discrete, comma separated selector per line in multi-selector rulesets.
 
-####Preprocessors -
+####Preprocessors 
 * Do not nest deeper than 3 levels (with the exception of pseudo/hover states).
 * Declare @extend followed by @include statements first in a declaration block whenever possible.
 * If :hover pseudo class is styled, :focus should also be styled for accessibility. Focus styles should never be removed.
