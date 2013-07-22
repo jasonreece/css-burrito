@@ -1,4 +1,4 @@
-#Burrito - 
+#CSS Burrito  
 #An organizational Sass Template. 
 
 This template pulls heavily from the following CSS Architectures:  
