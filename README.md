@@ -3,11 +3,11 @@
 
 This template pulls heavily from the following CSS Architectures:  
 
-SMACSS  
-[http://smacss.com/] (http://smacss.com/)
-
 OOCSS  
 [http://oocss.org/] (http://oocss.org/)
+
+SMACSS  
+[http://smacss.com/] (http://smacss.com/)
 
 MVCSS  
 [http://mvcss.github.io/] (http://mvcss.github.io/)
@@ -28,11 +28,10 @@ There are four main sections in this Template.  **Application.css.scss**, **Libs
 * It has a **Shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later.
 
 #### **Libs**
-This section will house CSS libraries like **Bootstrap**, **Foundation**, or **Pure**.  
+This section will house CSS libraries like **Normalize**, **Bootstrap**, **Foundation**, or **Pure**.  
 It also contains a **library-variable-overrides** file.  Be sure to make any library variable changes here.
   
-#### **Core** -  There are six core components.
-* **Reset** - Normalize.css is included in the template, but commented out by default.
+#### **Core** -  There are five core components.
 * **Settings** - @font-face and global variables
 * **Helpers** - Extends, Functions, Mixins
 * **Base** - Base-level tags (body, p, etc.)

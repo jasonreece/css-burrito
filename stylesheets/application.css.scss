@@ -1,13 +1,17 @@
 // -------------------------------------
 //
 //   Application.css.scss
-//   Contains an import section, the inbox, and a shame section for quick fixes and hacks
+//   Contains an import section for libraries, core, and modules, the inbox, and a shame section for quick fixes and hacks
 //
 // -------------------------------------
 
 // -------------------------------------
 //   Libraries
 // -------------------------------------
+
+// ----- Reset - Normalize.css ----- //
+// @import "libs/normalize";
+
 // ----- Variable overrides for Bootstrap and other libraries ----- //
 // @import "libs/library-variable-overrides";
 
@@ -22,8 +26,6 @@
 // -------------------------------------
 //   Core
 // -------------------------------------
-// ----- Reset - Normalize.css ----- //
-// @import "core/normalize";
 
 // ----- Settings - @Font-Face Declarations, Variables ----- //
 @import "core/settings";
