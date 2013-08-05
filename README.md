@@ -1,9 +1,5 @@
 **css-burrito** -  an organizational Sass template  
 
-How OCD is your CSS?  Are you following object oriented conventions?  Do you adhere to a strict style guide?  Do you have a hard time sleeping if your properties haven't been alphabetized, or organized into sections like "Positioning" and "Box Model".
-
-If so, you are a perfect candidate for using a css template like [css-burrito](https://github.com/jasonreece/css-burrito).
-
 To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:  
 
 ####[OOCSS](http://oocss.org/) - Object Oriented CSS
