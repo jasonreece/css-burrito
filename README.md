@@ -4,7 +4,7 @@ To understand why you would want to use this template, it is a great idea to fam
 
 ####[OOCSS](http://oocss.org/) - Object Oriented CSS
 
-* **Separate structure and skin** - Structure properties like width and height should be separated from skin properties like background and border.
+* **Separate structure and skin** - Structure properties like padding and margin should be separated from skin properties like background and border.
 * **Separate content from container** - Content modules like buttons and lists should not be dependent on their parent containers.  
 
 ####[SMACSS] (http://smacss.com/) - Scalable and Modular Architecture for CSS
@@ -74,10 +74,9 @@ This template should feel intuitive and easy to use.  The goal is to keep everyt
 * For example:
     * A layout class name should be written as: ```l-example-classname```
     * A typography class name should be written as: ```t-example-classname```
-    * A module class name should be written as: ```module-example-classname```
+    * A module class name should be written as: ```modulename-example-classname```
     * Utility class names should be written as: ```u-example-classname```
-* Each indentation level is made up of two spaces. Avoid using tabs.
-* Do not over-qualify class name selectors with an element type unless you are specifying exceptions to the default styling of a particular class.
+* Do not over-qualify selectors.  Keep specificity number as low as possible.
 * Use one discrete, comma separated selector per line in multi-selector rulesets.
 
 ####Preprocessors 
