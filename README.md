@@ -25,7 +25,7 @@ css-burrito is a sass template to help integrate suggested best practices into a
 To use this template, just delete your current stylesheets directory (or whatever the folder that houses your CSS files is named), and replace it with this one. Then update your path on your projects index page if necessary.
 
 **Note for Rails Users:** 
-Any new ```**.scss**``` files that are created by generating Rails controls will not be used, and can be deleted.
+Any new ```.scss``` files that are created by generating Rails controls will not be used, and can be deleted.
 
 ###What is in this burrito?
 
@@ -59,8 +59,8 @@ Inside the **layouts** file and in the **example-module** file, there is a secti
 * States are styles that override all other styles.  Usually via javascript.  
 * States are generally applied to the same element as a layout rule, or to the same element as a base module.
 * An example would be a navigation drop down, or a message that displays a success or error state. 
-* State class names should be written as a boolean.  For example, ```**.is-collapsed**``` or ```**.is-error**```.
-* When state rules are added to specific modules, the module name should be included in the classname.  For example, an active tab state could be written as ```**.is-tab-active**```.
+* State class names should be written as a boolean.  For example, ```.is-collapsed``` or ```.is-error```.
+* When state rules are added to specific modules, the module name should be included in the classname.  For example, an active tab state could be written as ```.is-tab-active```.
 
 ###Wrapping it all together.
 This template should feel intuitive and easy to use.  The goal is to keep everything organized so that large projects will scale nicely without duplicating code, or having unnecessary increases in specificity.
@@ -72,17 +72,17 @@ This template should feel intuitive and easy to use.  The goal is to keep everyt
 * All CSS class names should use dashes instead of underscores or camel case.
 * All CSS class names should begin with a prefix describing the filename where the styles will be written.
 * For example:
-    * A layout class name should be written as: ```**l-example-classname**```
-    * A typography class name should be written as: ```**t-example-classname**```
-    * A module class name should be written as: ```**module-example-classname**```
-    * Utility class names should be written as: ```**u-example-classname**```
+    * A layout class name should be written as: ```l-example-classname```
+    * A typography class name should be written as: ```t-example-classname```
+    * A module class name should be written as: ```module-example-classname```
+    * Utility class names should be written as: ```u-example-classname```
 * Each indentation level is made up of two spaces. Avoid using tabs.
 * Do not over-qualify class name selectors with an element type unless you are specifying exceptions to the default styling of a particular class.
 * Use one discrete, comma separated selector per line in multi-selector rulesets.
 
 ####Preprocessors 
 * Do not nest deeper than 3 levels (with the exception of pseudo/hover states).
-* Declare ```**@extend**``` followed by ```**@include**``` statements first in a declaration block whenever possible.
-* If a ```**:hover**``` pseudo class is styled, ```**:focus**``` should also be styled for accessibility. Focus styles should never be removed
+* Declare ```@extend``` followed by ```@include``` statements first in a declaration block whenever possible.
+* If a ```:hover``` pseudo class is styled, ```:focus``` should also be styled for accessibility. Focus styles should never be removed
 
 See something that could be improved?  Tweet [@jason_reece](https://twitter.com/Jason_Reece) with your thoughts.
