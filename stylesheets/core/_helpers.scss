@@ -18,7 +18,7 @@
   *text-indent: -9999px;
 }
 
-.ir:before {
+%ir:before {
   content: "";
   display: block;
   width: 0;
