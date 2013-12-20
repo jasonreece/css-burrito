@@ -64,7 +64,7 @@ Inside the **layouts** file and in the **example-module** file, there is a secti
 ###Wrapping it all together.
 This template should feel intuitive and easy to use.  The goal is to keep everything organized so that large projects will scale nicely without duplicating code, or having unnecessary increases in specificity.
 
-##Setup
+<!-- ##Setup
 To make adding new modules easy, css-burrito has a shell script that will add new modules for you.
 
 **To use this feature:**  
@@ -75,7 +75,7 @@ Open up the command line, and navigate to the project root.
 
 Then run the following command   
 
-```./setup.sh```  
+``` ./setup.sh```  
 
 This will only need to be done once.  
 
@@ -88,7 +88,7 @@ From here, in the command line, you can type
 ```burrito example-module ```
 
 This will create a file with some default comments, in this case named ```_example-module.scss``` and import it into the main ```_modules.scss``` file for you.  
-
+ -->
 ##Suggested Styleguide
 
 ####General Styling  
