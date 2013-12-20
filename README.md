@@ -1,4 +1,5 @@
-#**css-burrito** -  an organizational Sass template  
+#**css-burrito** 
+##**an organizational Sass template**
 
 To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:  
 
@@ -14,8 +15,6 @@ To understand why you would want to use this template, it is a great idea to fam
 * Organize your css files into sections like **base rules**, **layout rules**, and **modules** so that the styling will be flexible and easily maintainable.
 
 ####[MVCSS] (http://mvcss.github.io/) - A Sass based CSS architecture and style guide.  
-
-
 
 Ok, now that you're familiar with those concepts, are you hungry for some burrito?
 
@@ -64,6 +63,31 @@ Inside the **layouts** file and in the **example-module** file, there is a secti
 
 ###Wrapping it all together.
 This template should feel intuitive and easy to use.  The goal is to keep everything organized so that large projects will scale nicely without duplicating code, or having unnecessary increases in specificity.
+
+##Setup
+To make adding new modules easy, css-burrito has a shell script that will add new modules for you.
+
+**To use this feature:**  
+
+Open up the command line, and navigate to the project root.  
+
+``` cd ~/Desktop/css-burrito-master```
+
+Then run the following command -
+
+```./setup.sh```
+
+This will only need to be done once.
+
+After that,  navigate to the modules folder in any project that has a ```burrito.sh``` file.
+
+```cd path/to/project/stylesheets/modules```
+
+From here, in the command line, you can type -
+
+```burrito example-module ```
+
+This will create a file with some default comments, in this case named ```_example-module.scss``` and import it into the main ```_modules.scss``` file for you.  
 
 ##Suggested Styleguide
 
