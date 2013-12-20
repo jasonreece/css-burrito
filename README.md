@@ -73,17 +73,17 @@ Open up the command line, and navigate to the project root.
 
 ``` cd ~/Desktop/css-burrito-master```
 
-Then run the following command -
+Then run the following command -  
 
 ```./setup.sh```  
 
-This will only need to be done once.
+This will only need to be done once.  
 
-After that,  navigate to the modules folder in any project that has a ```burrito.sh``` file.
+After that,  navigate to the modules folder in any project that has a ```burrito.sh``` file.  
 
 ```cd path/to/project/stylesheets/modules```
 
-From here, in the command line, you can type -
+From here, in the command line, you can type -  
 
 ```burrito example-module ```
 
