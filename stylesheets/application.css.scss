@@ -46,11 +46,12 @@
 // ----- Layout - Margin, Padding, Sizing ----- //
 @import "core/layout";
 
+// ----- Skin - Backgrounds, Borders, Box-shadow, etc ----- //
+@import "core/skin";
 
-// -------------------------------------
-//   Modules
-// -------------------------------------
-@import "modules/modules";
+// ----- Modules - Imports all module files. ----- //
+@import "core/modules";
+
 
 // -------------------------------------
 //   Inbox 

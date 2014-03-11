@@ -33,12 +33,15 @@ echo '// -------------------------------------' >> _$1.scss
 echo '//   States' >> _$1.scss
 echo '// -------------------------------------' >> _$1.scss
 
+
+
+cd ../core/
+
 echo '// Modules' > _modules.scss 
  
-for file in *.scss
-do  
-  echo '@import "'$file'";' | sed s/_// | sed s/.scss// | grep -v 'modules' | sort >> _modules.scss
+for file in ../modules/*.scss
+do
+  echo '@import "'$file'";' | sed s/_// | sed s/.scss// | sort >> _modules.scss
 done
 
 cd ../../
-
