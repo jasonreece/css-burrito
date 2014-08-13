@@ -16,10 +16,7 @@ To understand why you would want to use this template, it is a great idea to fam
 
 Ok, now that you're familiar with those concepts, are you hungry for some burrito?
 
-### What is css-burrito?
-css-burrito is a sass template to help integrate suggested best practices into any project.
-
-###What is in this burrito?
+###What's in this burrito?
 
 css-burrito has four main ingredients.
 ####**1.  Application.css.scss**
