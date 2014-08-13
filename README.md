@@ -55,11 +55,12 @@ To make adding new modules easy, css-burrito has a shell script that will add ne
 
 Open up the command line, and navigate to the project root.
 
-``` cd ~/Desktop/css-burrito-master```
+```
+cd ~/Desktop/css-burrito-master
+```
 
 Then run the following command:
 
-<!-- ```./setup.sh``` -->
 
 ```
 ./setup.sh
@@ -69,11 +70,15 @@ This will only need to be done once.
 
 After that,  navigate to the modules folder in any project that has a ```burrito.sh``` file.
 
-```cd path/to/project/stylesheets/modules```
+```
+cd path/to/project/stylesheets/modules
+```
 
 From here, in the command line, you can type:
 
-```burrito example-module ```
+```
+burrito example-module
+```
 
 This will create a file with some default comments, in this case named ```_example-module.scss``` and import it into the main ```_modules.scss``` file for you.
 
