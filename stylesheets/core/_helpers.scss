@@ -8,35 +8,35 @@
 //   Placeholders
 // -------------------------------------
 
-// Image Replacement
-%ir {
-  background-color: transparent;
-  border: 0;
-  overflow: hidden;
-  *text-indent: -9999px;
-}
+// ----- Image Replacement. ----- //
+// %ir {
+//   background-color: transparent;
+//   border: 0;
+//   overflow: hidden;
+//   *text-indent: -9999px;
+// }
 
-%ir:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 150%;
-}
+// %ir:before {
+//   content: "";
+//   display: block;
+//   width: 0;
+//   height: 150%;
+// }
 
-// Clearfix
-%clearfix:before,
-%clearfix:after {
-  content: " ";
-  display: table;
-}
+// ----- Clearfix ----- //
+// %clearfix:before,
+// %clearfix:after {
+//   content: " ";
+//   display: table;
+// }
 
-%clearfix:after {
-  clear: both;
-}
+// %clearfix:after {
+//   clear: both;
+// }
 
-%clearfix {
-  *zoom: 1;
-}
+// %clearfix {
+//   *zoom: 1;
+// }
 
 // -------------------------------------
 //   Extends
@@ -47,6 +47,33 @@
 //   Mixins
 // -------------------------------------
 
+// ----- Adds responsive breakpoints. ----- //
+// @mixin breakpoint($width) {
+//   @media (min-width: $width) {
+//     @content;
+//   }
+// }
+
+// ----- Adds accessibility pseudo selectors to hover states. ----- //
+// @mixin attention() {
+//   &:hover,
+//   &:active,
+//   &:focus {
+//     @content;
+//   }
+// }
+
+// ----- Rem font size mixin with px fallback. ----- //
+// @mixin font-size($px) {
+//   font-size: $px + px;
+//   font-size: ($px/10) + rem;
+// }
+
+// ----- Rem line-height mixin with px fallback. ----- //
+// @mixin line-height($px) {
+//   line-height: $px + px;
+//   line-height: ($px/10) + rem;
+// }
 
 // -------------------------------------
 //   Functions
