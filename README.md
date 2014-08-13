@@ -61,7 +61,9 @@ Then run the following command:
 
 <!-- ```./setup.sh``` -->
 
-```./setup.sh```
+```
+./setup.sh
+```
 
 This will only need to be done once.
 
