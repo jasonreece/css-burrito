@@ -1,5 +1,5 @@
 #**css-burrito**
-##**an organizational Sass template**
+##**An organizational Sass template**
 
 To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:
 
