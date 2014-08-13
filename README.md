@@ -48,7 +48,39 @@ It also contains a ```_library-variable-overrides.scss``` file.  Any overrides t
 ###Wrapping it all together.
 This template should feel intuitive and easy to use.  The goal is to keep everything organized so that large projects will scale nicely without duplicating code, or having unnecessary increases in specificity.
 
+#### Components
+
+To avoid littering your markup with classes, and to promote code reuse, I suggest using the following pattern whenever possible.
+
+The Markup:
+
+        <div class="example-c-component">
+
+The Sass:
+
+        // ----- example-component ---- //
+
+        %example-l-component {
+          // write layout code here...
+        }
+
+        %example-s-component {
+          // write skin code here...
+        }
+
+        %example-t-component {
+          // write typography code here...
+        }
+
+        .example-c-component {
+          // add placeholders here...
+          @extend %example-l-component;
+          @extend %example-s-component;
+          @extend %example-t-component;
+        }
+
 ##Automation
+### Adding New Modules
 To make adding new modules easy, css-burrito has a shell script that will add new modules for you.
 
 **To use this feature:**
@@ -81,6 +113,30 @@ burrito example-module
 ```
 
 This will create a file with some default comments, in this case named ```_example-module.scss``` and import it into the main ```_modules.scss``` file for you.
+
+###Adding New Components
+Using the above component pattern can be painful to type over and over.  Instead, use a snippet manager like [Dash](http://kapeli.com/dash) to write it for you.
+
+This is the Dash snippet that I use:
+
+        // ----- __1__-__2__ ---- //
+        %__1__-l-__2__ {
+          @cursor
+        }
+
+        %__1__-s-__2__ {
+
+        }
+
+        %__1__-t-__2__ {
+
+        }
+
+        .__1__-c-__2__ {
+          @extend %__1__-l-__2__;
+          @extend %__1__-s-__2__;
+          @extend %__1__-t-__2__;
+        }
 
 ##Suggested Styleguide
 
