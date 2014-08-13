@@ -70,11 +70,13 @@ The Sass:
         }
 
         .example-c-component {
-          // add placeholders here...
           @extend %example-l-component;
           @extend %example-s-component;
           @extend %example-t-component;
+          // add and remove placeholders as needed...
         }
+
+This pattern allows you to easily separate layout, skin, and typography within a given module.
 
 ##Automation
 ### Adding New Modules
