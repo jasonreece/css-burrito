@@ -68,10 +68,10 @@ Then run the following command:
 
 This will only need to be done once.
 
-After that,  navigate to the modules folder in any project that has a ```burrito.sh``` file.
+After that,  navigate to the stylesheets directory in any project that has a ```burrito.sh``` file.
 
 ```
-cd path/to/project/stylesheets/modules
+cd path/to/project/stylesheets/
 ```
 
 From here, in the command line, you can type:
