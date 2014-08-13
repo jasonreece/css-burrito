@@ -59,7 +59,7 @@ Open up the command line, and navigate to the project root.
 
 Then run the following command:
 
-``` ./setup.sh```
+<!-- ``` ./setup.sh``` -->
 
 This will only need to be done once.
 
