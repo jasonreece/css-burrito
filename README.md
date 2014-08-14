@@ -97,9 +97,11 @@ Then run the following command:
 ./setup.sh
 ```
 
-This will only need to be done once.
+This will add the burrito alias to your machine, and will only need to be done once.
 
-After that, navigate to the project directory that has a ```burrito.sh``` file.  (This should be a sibling to the stylesheets directory.)
+After that, navigate to the project directory that has a ```burrito.sh``` file.
+
+(```burrito.sh``` should be at the root of the project, and a sibling to the stylesheets directory.)
 
 From here, in the command line, you can type:
 
