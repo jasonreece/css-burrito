@@ -99,11 +99,7 @@ Then run the following command:
 
 This will only need to be done once.
 
-After that,  navigate to the stylesheets directory in any project that has a ```burrito.sh``` file.
-
-```
-cd path/to/project/stylesheets/
-```
+After that, navigate to the project directory that has a ```burrito.sh``` file.  (This should be a sibling to the stylesheets directory.)
 
 From here, in the command line, you can type:
 
