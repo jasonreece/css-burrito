@@ -5,7 +5,6 @@
 
 Clone the Repo or install with npm.
 
-#### Install with npm:
 ```
 npm install -g css-burrito
 ```
@@ -15,6 +14,17 @@ In the command line, navigate to the folder that you want to install the project
 ```
 newburrito
 ```
+
+### Adding New Modules
+To make adding new modules easy, css-burrito has an npm package that will add new modules for you.
+
+To use this feature navigate to the modules folder and run:
+
+```
+burrito example-module
+```
+
+This will create a file with some default comments, in this case named ```_example-module.scss``` and import it into the main ```_modules.scss``` file for you.
 
 ### Why css-burrito?
 
@@ -95,22 +105,7 @@ The Sass:
 
 This pattern allows you to easily separate layout, skin, and typography within a given module.
 
-##Automation
-### Adding New Modules
-To make adding new modules easy, css-burrito has an npm package that will add new modules for you.
-
-**To use this feature:**
-
-Navigate to the modules folder and run:
-
-```
-burrito example-module
-```
-
-This will create a file with some default comments, in this case named ```_example-module.scss``` and import it into the main ```_modules.scss``` file for you.
-
-
-###Adding New Components
+#### Adding New Components
 Using the above component pattern can be painful to type over and over.  Instead, use a snippet manager like [Dash](http://kapeli.com/dash) to write it for you.
 
 This is the Dash snippet that I use:
@@ -151,4 +146,4 @@ This is the Dash snippet that I use:
 ####Preprocessors
 * Do not nest deeper than 3 levels (with the exception of pseudo/hover states).
 * Declare ```@extend``` followed by ```@include``` statements first in a declaration block whenever possible.
-* If a ```:hover``` pseudo class is styled, ```:focus``` should also be styled for accessibility. Focus styles should never be removed
+* If a ```:hover``` pseudo class is styled, ```:focus``` should also be styled for accessibility. Focus styles should never be removed.
