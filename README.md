@@ -1,6 +1,17 @@
 #**css-burrito**
 ##**An organizational Sass template**
 
+### Quick Install
+
+Clone the Repo or install with npm.
+
+#### Install with npm:
+``` npm install -g css-burrito ```
+In the command line, navigate to the folder that you want to install the project, and run:
+``` newburrito ```
+
+### Why css-burrito?
+
 To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:
 
 ####[OOCSS](http://oocss.org/) - Object Oriented CSS
@@ -80,36 +91,18 @@ This pattern allows you to easily separate layout, skin, and typography within a
 
 ##Automation
 ### Adding New Modules
-To make adding new modules easy, css-burrito has a shell script that will add new modules for you.
+To make adding new modules easy, css-burrito has an npm package that will add new modules for you.
 
 **To use this feature:**
 
-Open up the command line, and navigate to the project root.
-
-```
-cd ~/Desktop/css-burrito-master
-```
-
-Then run the following command:
-
-
-```
-./setup.sh
-```
-
-This will add the burrito alias to your machine, and will only need to be done once.
-
-After that, navigate to the project directory that has a ```burrito.sh``` file.
-
-(```burrito.sh``` should be at the root of the project, and a sibling to the stylesheets directory.)
-
-From here, in the command line, you can type:
+Navigate to the modules folder and run:
 
 ```
 burrito example-module
 ```
 
 This will create a file with some default comments, in this case named ```_example-module.scss``` and import it into the main ```_modules.scss``` file for you.
+
 
 ###Adding New Components
 Using the above component pattern can be painful to type over and over.  Instead, use a snippet manager like [Dash](http://kapeli.com/dash) to write it for you.
