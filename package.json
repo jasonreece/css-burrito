@@ -1,6 +1,6 @@
 {
   "name": "css-burrito",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "An organizational Sass template",
   "main": "index.js",
   "scripts": {
