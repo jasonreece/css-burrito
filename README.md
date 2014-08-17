@@ -11,6 +11,7 @@ npm install -g css-burrito
 ```
 
 In the command line, navigate to the folder that you want to install the project, and run:
+
 ``` newburrito ```
 
 ### Why css-burrito?
