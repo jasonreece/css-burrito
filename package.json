@@ -9,7 +9,7 @@
   "preferGlobal": "true",
   "bin":  {
     "burrito": "./burrito.sh",
-    "newburrito": "./newburrito.sh"
+    "new-burrito": "./newburrito.sh"
   },
   "repository": {
     "type": "git",
