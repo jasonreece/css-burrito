@@ -16,7 +16,7 @@ new-burrito
 ```
 
 ### Adding New Modules
-To make adding new modules easy, css-burrito has an npm package that will add new modules for you.
+css-burrito will add new modules for you!
 
 To use this feature navigate to the modules folder and run:
 
@@ -47,20 +47,19 @@ Ok, now that you're familiar with those concepts, are you hungry for some burrit
 
 css-burrito has four main ingredients.
 ####**1.  Application.css.scss**
-- This section serves three purposes.
-* It imports all of the files from the **Libs**, **Core** and **Module** sections.
+* This file imports all of the other files from the **Libs**, **Core** and **Module** sections.
 * It has an **Inbox** section where developers that don't usually work on the project can leave temporary code that is easily seen by the maintainers of the project.
-* It has a **Shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later.
+* It also has a **Shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later.
 
 #### **2.  Libs**
-This section can house third party CSS libraries like [Normalize](http://necolas.github.io/normalize.css/), [Bootstrap](http://getbootstrap.com/), or [Foundation](http://foundation.zurb.com/).
-It also contains a ```_library-variable-overrides.scss``` file.  Any overrides to Bootstrap or other library variables should be made in this file to prevent unnecessary overwriting.
-**Normalize** is included in the libs folder by default.
+* This section houses third party CSS libraries like [Normalize](http://necolas.github.io/normalize.css/), [Bootstrap](http://getbootstrap.com/), or [Foundation](http://foundation.zurb.com/).
+* It also contains a ```_library-variable-overrides.scss``` file for overriding third party variables.
+* Normalize is included in the libs folder by default.
 
 #### **3.  Core** -  There are six core components.
 * **Settings** - @font-face and global variables
 * **Utilities** - Placeholders, Extends, Mixins, Functions, etc.
-* **Base** - Global defaults for Base-level tags (body, p, etc.)
+* **Base** - Global defaults for base-level tags (body, p, etc.)
 * **Layout** - Global layout classes (margin, padding, floats, etc).
 * **Skin** - Global skin classes (gradients, colors, box-shadows, etc).
 * **Typography** - Global typography classes.
@@ -74,7 +73,7 @@ This template should feel intuitive and easy to use.  The goal is to keep everyt
 
 #### Components
 
-To avoid littering your markup with classes, and to promote code reuse, I suggest using the following pattern whenever possible.
+To avoid littering your markup with classes, and to promote code reuse, css-burrito uses the following pattern whenever possible.
 
 The Markup:
 
@@ -106,28 +105,18 @@ The Sass:
 This pattern allows you to easily separate layout, skin, and typography within a given module.
 
 #### Adding New Components
-Using the above component pattern can be painful to type over and over.  Instead, use a snippet manager like [Dash](http://kapeli.com/dash) to write it for you.
+Using the above component pattern can be painful to type over and over.  Let css-burrito help!
 
-This is the Dash snippet that I use:
+In the command line, run the following:
 
-        // ----- __1__-__2__ ---- //
-        %__1__-l-__2__ {
-          @cursor
-        }
+```
+b-comp example component
+```
 
-        %__1__-s-__2__ {
+```b-comp``` creates a new snippet, and copies it to your clipboard.
+The first argument should be the module name, and the second should be descriptive information about the component.
 
-        }
-
-        %__1__-t-__2__ {
-
-        }
-
-        .__1__-c-__2__ {
-          @extend %__1__-l-__2__;
-          @extend %__1__-s-__2__;
-          @extend %__1__-t-__2__;
-        }
+If the output in the command line looks correct, just switch over to your text editor and hit paste.  This code should be pasted into the appropriate modules "Components" section.
 
 ##Suggested Styleguide
 
