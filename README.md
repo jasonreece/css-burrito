@@ -59,7 +59,7 @@ It also contains a ```_library-variable-overrides.scss``` file.  Any overrides t
 
 #### **3.  Core** -  There are six core components.
 * **Settings** - @font-face and global variables
-* **Helpers** - Placeholders, Extends, Mixins, Functions, etc.
+* **Utilities** - Placeholders, Extends, Mixins, Functions, etc.
 * **Base** - Global defaults for Base-level tags (body, p, etc.)
 * **Layout** - Global layout classes (margin, padding, floats, etc).
 * **Skin** - Global skin classes (gradients, colors, box-shadows, etc).
