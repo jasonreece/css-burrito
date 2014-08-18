@@ -1,6 +1,30 @@
 #! /bin/bash
 
-MINPARAMS=1
+if [ $# -ne 1 ]; then
+    echo ''
+    echo 'Oops, please pass in one argument - the name of your module.'
+    echo ''
+    echo 'The goal is to create a new module file, with default comments,'
+    echo 'and to @import the new file to the main _module.scss file.'
+    echo ''
+    exit 1
+fi
+
+if [ ! -f _modules.scss ]; then
+    echo ''
+    echo "Oops, looks like you don't have a _modules.scss file!"
+    echo 'Are you in the correct directory?'
+    echo ''
+    echo 'If you really want to add new files here,'
+    echo 'make sure to create a _modules.scss file first.'
+    echo ''
+    exit 1
+fi
+
+echo ''
+echo 'Yum! You have created a new file named _'$1'.scss,'
+echo 'and it has been imported into the _modules.scss file.'
+echo ''
 
 touch _$1.scss
 
@@ -130,8 +154,6 @@ echo '//    SSSSSSSSSSSSSSS'                    >> _$1.scss
 echo '//'                                       >> _$1.scss
 echo '// -------------------------------------' >> _$1.scss
 echo ''                                         >> _$1.scss
-
-
 
 echo '// Modules' > _modules.scss
 
