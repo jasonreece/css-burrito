@@ -15,7 +15,7 @@ if [ $# -ne 2 ]; then
     echo ''
     echo 'The goal is to output a snippet that looks like this:'
     echo ''
-    echo '/ ----- example-component ---- //'
+    echo '// ----- example-component ---- //'
     echo '%example-l-component {'
     echo '  // write layout code here...'
     echo '}'
