@@ -64,15 +64,15 @@
 // }
 
 // ----- Rem font size mixin with px fallback. ----- //
-// @mixin font-size($px) {
-//   font-size: $px + px;
-//   font-size: ($px/10) + rem;
+// @mixin font-size($px-width) {
+//   font-size: #{$px-width * 10}px;
+//   font-size: #{$px-width}rem;
 // }
 
 // ----- Rem line-height mixin with px fallback. ----- //
-// @mixin line-height($px) {
-//   line-height: $px + px;
-//   line-height: ($px/10) + rem;
+// @mixin line-height($px-height) {
+//   line-height: #{$px-height * 10}px;
+//   line-height: #{$px-height}rem;
 // }
 
 // -------------------------------------
