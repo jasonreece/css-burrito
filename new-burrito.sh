@@ -2,9 +2,17 @@
 
 git clone https://github.com/jasonreece/css-burrito.git
 
+cd css-burrito
+
+rm -r -f LICENSE.md README.md burrito.sh new-burrito.sh burrito-component.sh package.json setup.sh
+
+cd ../
+
 mv css-burrito/* .
 
-rm -r -f LICENSE.md README.md burrito.sh new-burrito.sh burrito-component.sh css-burrito/ package.json setup.sh
+rm -r -f css-burrito/
+
+
 
 echo ''
 echo '////////////////////////////////////////////////////////////'
