@@ -8,6 +8,23 @@
 //   @font-face
 // -------------------------------------
 
+// Add fonts to project as needed in the following format -
+// 'font-name': 'font-folder'
+
+// $fonts: (
+//   'font-name': 'font-folder',
+//   'font-name-two': 'font-folder-two'
+// );
+
+// @each $font-name, $font-folder in $fonts {
+//   @font-face {
+//     font-family: #{$font-name};
+//     src: url('path/to/fonts/#{$font-folder}/#{$font-name}.eot?#iefix') format('embedded-opentype'),
+//          url('path/to/fonts/#{$font-folder}/#{$font-name}.woff') format('woff'),
+//          url('path/to/fonts/#{$font-folder}/#{$font-name}.ttf') format('truetype'),
+//          url('path/to/fonts/#{$font-folder}/#{$font-name}.svg##{$font-name}') format('svg');
+//   }
+// }
 
 // -------------------------------------
 //   Variables
