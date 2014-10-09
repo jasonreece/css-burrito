@@ -19,7 +19,7 @@
 // @each $font-group, $font-names in $fonts {
 //   @each $font-name in $font-names {
 //     @font-face {
-//       name: $font-group;
+//       name: $font-name;
 //       src:
 //         url('/path/to/fonts/#{$font-group}/#{$font-name}.eot?#iefix') format('embedded-opentype'),
 //         url('/path/to/fonts/#{$font-group}/#{$font-name}.woff') format('woff'),
