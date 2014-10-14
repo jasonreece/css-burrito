@@ -10,11 +10,11 @@
 //   Libs
 // -------------------------------------
 
-// ----- Reset - Normalize.css ----- //
-// @import "libs/normalize";
-
 // ----- Variable overrides for Bootstrap and other libraries ----- //
 // @import "libs/library-variable-overrides";
+
+// ----- Reset - Normalize.css ----- //
+// @import "libs/normalize";
 
 // ----- Compass - Setup: http://compass-style.org/help/ ----- //
 // ----- Run compass create on project root ----- //
@@ -36,14 +36,14 @@
 // ----- Base - Base-level tags (body, p, etc.) ----- //
 @import "core/base";
 
-// ----- Typography - Fonts and Colors ----- //
-@import "core/typography";
-
 // ----- Layout - Margin, Padding, Sizing ----- //
 @import "core/layout";
 
 // ----- Skin - Backgrounds, Borders, Box-shadow, etc ----- //
 @import "core/skin";
+
+// ----- Typography - Fonts and Colors ----- //
+@import "core/typography";
 
 // ----- Modules - Imports all module files. ----- //
 @import "modules/modules";
