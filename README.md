@@ -12,7 +12,7 @@ npm install -g css-burrito
 In the command line, navigate to the folder that you want to install the project, and run:
 
 ```
-new-burrito
+burrito-new
 ```
 
 ### Adding New Modules
@@ -110,10 +110,10 @@ Using the above component pattern can be painful to type over and over.  Let css
 In the command line, run the following:
 
 ```
-b-comp example component
+burrito-c example component
 ```
 
-```b-comp``` creates a new snippet, and copies it to your clipboard.
+```burrito-c``` creates a new snippet, and copies it to your clipboard.
 The first argument should be the module name, and the second should be descriptive information about the component.
 
 If the output in the command line looks correct, just switch over to your text editor and hit paste.  This code should be pasted into the appropriate modules "Components" section.
