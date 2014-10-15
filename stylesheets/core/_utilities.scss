@@ -1,27 +1,12 @@
 // -------------------------------------
 //   Utilities
 // -------------------------------------
-// ----- Placeholders, Extends, Mixins, and Functions, etc
+// ----- Placeholders Extends, Mixins, Functions, and Utility Classes
 // -------------------------------------
 
 // -------------------------------------
-//   Placeholders
+//   Placeholder Extends
 // -------------------------------------
-
-// ----- Image Replacement. ----- //
-// %ir {
-//   background-color: transparent;
-//   border: 0;
-//   overflow: hidden;
-//   *text-indent: -9999px;
-// }
-
-// %ir:before {
-//   content: "";
-//   display: block;
-//   width: 0;
-//   height: 150%;
-// }
 
 // ----- Clearfix ----- //
 // %clearfix:before,
@@ -37,10 +22,6 @@
 // %clearfix {
 //   *zoom: 1;
 // }
-
-// -------------------------------------
-//   Extends
-// -------------------------------------
 
 
 // -------------------------------------
@@ -63,16 +44,10 @@
 //   }
 // }
 
-// ----- Rem font size mixin with px fallback. ----- //
-// @mixin font-size($px-width) {
-//   font-size: #{$px-width * 10}px;
-//   font-size: #{$px-width}rem;
-// }
-
-// ----- Rem line-height mixin with px fallback. ----- //
-// @mixin line-height($px-height) {
-//   line-height: #{$px-height * 10}px;
-//   line-height: #{$px-height}rem;
+// Rem sizing mixin with px fallback.
+// @mixin rem-sizing($property, $size) {
+//   #{$property}: $size * 10px;
+//   #{$property}: $size * 1rem;
 // }
 
 // -------------------------------------
