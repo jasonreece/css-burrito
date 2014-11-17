@@ -50,7 +50,7 @@ Ok, now that you're familiar with those concepts, are you hungry for some burrit
 ###What's in this burrito?
 
 css-burrito has four main ingredients.
-####**1.  Application.css.scss**
+####**1.  Application.scss**
 * This file imports all of the other files from the **Libs**, **Core** and **Module** sections.
 * It has an **Inbox** section where developers that don't usually work on the project can leave temporary code that is easily seen by the maintainers of the project.
 * It also has a **Shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later.
@@ -58,7 +58,7 @@ css-burrito has four main ingredients.
 #### **2.  Libs**
 * This section houses third party CSS libraries like [Normalize](http://necolas.github.io/normalize.css/), [Bootstrap](http://getbootstrap.com/), or [Foundation](http://foundation.zurb.com/).
 * It also contains a ```_library-variable-overrides.scss``` file for overriding third party variables.
-* Normalize is included in the libs folder by default.
+* Normalize v3.0.2 is included in the libs folder by default.
 
 #### **3.  Core** -  There are six core components.
 * **Settings** - @font-face and global variables
