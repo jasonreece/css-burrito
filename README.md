@@ -26,6 +26,10 @@ burrito example-module
 
 This will create a file with some default comments, in this case named ```_example-module.scss``` and import it into the main ```_modules.scss``` file for you.
 
+#### Want some comments?
+
+Just pass in ```-s```, ```-m```, or ```-l```, in like so: ```burrito -s example-module```, ```burrito -m example-module```, or ```burrito -l example-module``` to get small, medium, or large ascii comments.  These work great with the minimap in Sublime Text 2 or Atom to quickly move around in the module.
+
 ### Why css-burrito?
 
 To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:

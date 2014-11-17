@@ -1,6 +1,6 @@
 #! /bin/bash
 
-if [ $# -ne 1 ]; then
+if [ $# -eq 0 ]; then
     echo ''
     echo '  ____     ____    _____     _____   _ '
     echo ' / __ \   / __ \  |  __ \   / ____| | |'
@@ -37,169 +37,482 @@ if [ ! -f _modules.scss ]; then
     exit 1
 fi
 
-echo ''
-echo '////////////////////////////////////////////////////////////'
-echo '////////////////////////////////////////////////////////////'
-echo '////////////////////////////////////////////////////////////'
-echo '//////////////////////////////////........./////////////////'
-echo '///////////////////////////////.....mmmmm....///////////////'
-echo '/////////////////////////////.....mmmmmmmmmm.../////////////'
-echo '//////////////////////////.....mmmmmmmmmmmmmmmm...//////////'
-echo '////////////////////////.....mmmmmmmmmmmmmmmmmmmm...////////'
-echo '//////////////////////.....mmmmmmmmmmmmmmmmmmmmmm...////////'
-echo '////////////////////....mmmmmmmmmmmmmmmmmmmmmmmmm...////////'
-echo '///////////////////...mmmmmmmmmmmmmmmmmmmmmmmmmmm...////////'
-echo '/////////////////....mmmmmmmmmmmmmmmmmmmmmmmmmm..../////////'
-echo '///////////////....mmmmmmmmmmmmmmmmmmmmmmmmmmm....//////////'
-echo '////////////.....mmmmmmmmmmmmmmmmmmmmmmmmmmm....////////////'
-echo '/////////....mmmmmmmmmmmmmmmmmmmmmmmmmmmmmm..../////////////'
-echo '///////....mmmmmmmmm css-burrito mmmmmmmm....///////////////'
-echo '//////...........mmmmmmmmmmmmmmmmmmmmmmm....////////////////'
-echo '//////....mmmmm....mmmmmmmmmmmmmmmmmmm....//////////////////'
-echo '//////....mmmmmmm....mmmmmmmmmmmmmmm....////////////////////'
-echo '////////...mmmmmmmm....mmmmmmmmmmm....//////////////////////'
-echo '/////////.....mmmmmmm....mmmmmmm....////////////////////////'
-echo '///////////....mmmmmmm....mmmm....//////////////////////////'
-echo '/////////////....mmmmmm...mm....////////////////////////////'
-echo '///////////////....mmmmm......//////////////////////////////'
-echo '/////////////////........../////////////////////////////////'
-echo '/////////////////////....///////////////////////////////////'
-echo '////////////////////////////////////////////////////////////'
-echo '////////////////////////////////////////////////////////////'
-echo '////////////////////////////////////////////////////////////'
-echo ''
-echo 'Mmmmmmm! You have created a new file named _'$1'.scss,'
-echo 'and it has been imported into the _modules.scss file.'
-echo ''
+if [ $# -eq 1 ]; then
+    echo ''
+    echo '////////////////////////////////////////////////////////////'
+    echo '////////////////////////////////////////////////////////////'
+    echo '////////////////////////////////////////////////////////////'
+    echo '//////////////////////////////////........./////////////////'
+    echo '///////////////////////////////.....mmmmm....///////////////'
+    echo '/////////////////////////////.....mmmmmmmmmm.../////////////'
+    echo '//////////////////////////.....mmmmmmmmmmmmmmmm...//////////'
+    echo '////////////////////////.....mmmmmmmmmmmmmmmmmmmm...////////'
+    echo '//////////////////////.....mmmmmmmmmmmmmmmmmmmmmm...////////'
+    echo '////////////////////....mmmmmmmmmmmmmmmmmmmmmmmmm...////////'
+    echo '///////////////////...mmmmmmmmmmmmmmmmmmmmmmmmmmm...////////'
+    echo '/////////////////....mmmmmmmmmmmmmmmmmmmmmmmmmm..../////////'
+    echo '///////////////....mmmmmmmmmmmmmmmmmmmmmmmmmmm....//////////'
+    echo '////////////.....mmmmmmmmmmmmmmmmmmmmmmmmmmm....////////////'
+    echo '/////////....mmmmmmmmmmmmmmmmmmmmmmmmmmmmmm..../////////////'
+    echo '///////....mmmmmmmmm css-burrito mmmmmmmm....///////////////'
+    echo '//////...........mmmmmmmmmmmmmmmmmmmmmmm....////////////////'
+    echo '//////....mmmmm....mmmmmmmmmmmmmmmmmmm....//////////////////'
+    echo '//////....mmmmmmm....mmmmmmmmmmmmmmm....////////////////////'
+    echo '////////...mmmmmmmm....mmmmmmmmmmm....//////////////////////'
+    echo '/////////.....mmmmmmm....mmmmmmm....////////////////////////'
+    echo '///////////....mmmmmmm....mmmm....//////////////////////////'
+    echo '/////////////....mmmmmm...mm....////////////////////////////'
+    echo '///////////////....mmmmm......//////////////////////////////'
+    echo '/////////////////........../////////////////////////////////'
+    echo '/////////////////////....///////////////////////////////////'
+    echo '////////////////////////////////////////////////////////////'
+    echo '////////////////////////////////////////////////////////////'
+    echo '////////////////////////////////////////////////////////////'
+    echo ''
+    echo 'Mmmmmmm! You have created a new file named _'$1'.scss,'
+    echo 'and it has been imported into the _modules.scss file.'
+    echo ''
 
-touch _$1.scss
+    touch _$1.scss
 
-cap="$(tr '[:lower:]' '[:upper:]' <<< ${1:0:1})${1:1}"
+    echo '// -------------------------------------' >> _$1.scss
+    echo '// - styles for the' $1 'module'          >> _$1.scss
+    echo '// -------------------------------------' >> _$1.scss
+fi
 
-echo '// -------------------------------------' >> _$1.scss
-echo '// - '$cap 'Module'                       >> _$1.scss
-echo '// -------------------------------------' >> _$1.scss
-echo '// ----- Styles for the '$cap 'Module'    >> _$1.scss
-echo '// -------------------------------------' >> _$1.scss
-echo ''                                         >> _$1.scss
-echo '// -------------------------------------' >> _$1.scss
-echo '//   Layout'                              >> _$1.scss
-echo ''                                         >> _$1.scss
-echo '//    LLLLLLLLLLL'                        >> _$1.scss
-echo '//    L:::::::::L'                        >> _$1.scss
-echo '//    L:::::::::L'                        >> _$1.scss
-echo '//    LL:::::::LL'                        >> _$1.scss
-echo '//      L:::::L'                          >> _$1.scss
-echo '//      L:::::L'                          >> _$1.scss
-echo '//      L:::::L'                          >> _$1.scss
-echo '//      L:::::L'                          >> _$1.scss
-echo '//      L:::::L'                          >> _$1.scss
-echo '//      L:::::L'                          >> _$1.scss
-echo '//      L:::::L'                          >> _$1.scss
-echo '//      L:::::L         LLLLLL'           >> _$1.scss
-echo '//    LL:::::::LLLLLLLLL:::::L'           >> _$1.scss
-echo '//    L::::::::::::::::::::::L'           >> _$1.scss
-echo '//    L::::::::::::::::::::::L'           >> _$1.scss
-echo '//    LLLLLLLLLLLLLLLLLLLLLLLL'           >> _$1.scss
-echo '//'                                       >> _$1.scss
-echo '// -------------------------------------' >> _$1.scss
-echo ''                                         >> _$1.scss
-echo ''                                         >> _$1.scss
-echo '// -------------------------------------' >> _$1.scss
-echo '//   Skin'                                >> _$1.scss
-echo ''                                         >> _$1.scss
-echo '//'                                       >> _$1.scss
-echo '//      SSSSSSSSSSSSSSS'                  >> _$1.scss
-echo '//    SS:::::::::::::::S'                 >> _$1.scss
-echo '//   S:::::SSSSSS::::::S'                 >> _$1.scss
-echo '//   S:::::S     SSSSSSS'                 >> _$1.scss
-echo '//   S:::::S'                             >> _$1.scss
-echo '//   S:::::S'                             >> _$1.scss
-echo '//    S::::SSSS'                          >> _$1.scss
-echo '//     SS::::::SSSSS'                     >> _$1.scss
-echo '//       SSS::::::::SS'                   >> _$1.scss
-echo '//          SSSSSS::::S'                  >> _$1.scss
-echo '//               S:::::S'                 >> _$1.scss
-echo '//               S:::::S'                 >> _$1.scss
-echo '//   SSSSSSS     S:::::S'                 >> _$1.scss
-echo '//   S::::::SSSSSS:::::S'                 >> _$1.scss
-echo '//   S:::::::::::::::SS'                  >> _$1.scss
-echo '//    SSSSSSSSSSSSSSS'                    >> _$1.scss
-echo '//'                                       >> _$1.scss
-echo '// -------------------------------------' >> _$1.scss
-echo ''                                         >> _$1.scss
-echo ''                                         >> _$1.scss
-echo '// -------------------------------------' >> _$1.scss
-echo '//   Typography'                          >> _$1.scss
-echo ''                                         >> _$1.scss
-echo '//   TTTTTTTTTTTTTTTTTTTTTTT'             >> _$1.scss
-echo '//   T:::::::::::::::::::::T'             >> _$1.scss
-echo '//   T:::::::::::::::::::::T'             >> _$1.scss
-echo '//   T:::::TT:::::::TT:::::T'             >> _$1.scss
-echo '//   TTTTTT  T:::::T  TTTTTT'             >> _$1.scss
-echo '//           T:::::T'                     >> _$1.scss
-echo '//           T:::::T'                     >> _$1.scss
-echo '//           T:::::T'                     >> _$1.scss
-echo '//           T:::::T'                     >> _$1.scss
-echo '//           T:::::T'                     >> _$1.scss
-echo '//           T:::::T'                     >> _$1.scss
-echo '//           T:::::T'                     >> _$1.scss
-echo '//         TT:::::::TT'                   >> _$1.scss
-echo '//         T:::::::::T'                   >> _$1.scss
-echo '//         T:::::::::T'                   >> _$1.scss
-echo '//         TTTTTTTTTTT'                   >> _$1.scss
-echo '//'                                       >> _$1.scss
-echo '// -------------------------------------' >> _$1.scss
-echo ''                                         >> _$1.scss
-echo ''                                         >> _$1.scss
-echo '// -------------------------------------' >> _$1.scss
-echo '//   Components'                          >> _$1.scss
-echo ''                                         >> _$1.scss
-echo '//'                                       >> _$1.scss
-echo '//'                                       >> _$1.scss
-echo '//           CCCCCCCCCCCCC'               >> _$1.scss
-echo '//        CCC::::::::::::C'               >> _$1.scss
-echo '//      CC:::::::::::::::C'               >> _$1.scss
-echo '//     C:::::CCCCCCCC::::C'               >> _$1.scss
-echo '//    C:::::C       CCCCCC'               >> _$1.scss
-echo '//   C:::::C'                             >> _$1.scss
-echo '//   C:::::C'                             >> _$1.scss
-echo '//   C:::::C'                             >> _$1.scss
-echo '//   C:::::C'                             >> _$1.scss
-echo '//   C:::::C'                             >> _$1.scss
-echo '//   C:::::C'                             >> _$1.scss
-echo '//    C:::::C       CCCCCC'               >> _$1.scss
-echo '//     C:::::CCCCCCCC::::C'               >> _$1.scss
-echo '//      CC:::::::::::::::C'               >> _$1.scss
-echo '//        CCC::::::::::::C'               >> _$1.scss
-echo '//           CCCCCCCCCCCCC'               >> _$1.scss
-echo '//'                                       >> _$1.scss
-echo '// -------------------------------------' >> _$1.scss
-echo ''                                         >> _$1.scss
-echo ''                                         >> _$1.scss
-echo '// -------------------------------------' >> _$1.scss
-echo '//   States'                              >> _$1.scss
-echo ''                                         >> _$1.scss
-echo '//'                                       >> _$1.scss
-echo '//      SSSSSSSSSSSSSSS'                  >> _$1.scss
-echo '//    SS:::::::::::::::S'                 >> _$1.scss
-echo '//   S:::::SSSSSS::::::S'                 >> _$1.scss
-echo '//   S:::::S     SSSSSSS'                 >> _$1.scss
-echo '//   S:::::S'                             >> _$1.scss
-echo '//   S:::::S'                             >> _$1.scss
-echo '//    S::::SSSS'                          >> _$1.scss
-echo '//     SS::::::SSSSS'                     >> _$1.scss
-echo '//       SSS::::::::SS'                   >> _$1.scss
-echo '//          SSSSSS::::S'                  >> _$1.scss
-echo '//               S:::::S'                 >> _$1.scss
-echo '//               S:::::S'                 >> _$1.scss
-echo '//   SSSSSSS     S:::::S'                 >> _$1.scss
-echo '//   S::::::SSSSSS:::::S'                 >> _$1.scss
-echo '//   S:::::::::::::::SS'                  >> _$1.scss
-echo '//    SSSSSSSSSSSSSSS'                    >> _$1.scss
-echo '//'                                       >> _$1.scss
-echo '// -------------------------------------' >> _$1.scss
-echo ''                                         >> _$1.scss
+while getopts ":s:m:l:" opt; do
+    case $opt in
+        s)
+            echo ''
+            echo '////////////////////////////////////////////////////////////'
+            echo '////////////////////////////////////////////////////////////'
+            echo '////////////////////////////////////////////////////////////'
+            echo '//////////////////////////////////........./////////////////'
+            echo '///////////////////////////////.....mmmmm....///////////////'
+            echo '/////////////////////////////.....mmmmmmmmmm.../////////////'
+            echo '//////////////////////////.....mmmmmmmmmmmmmmmm...//////////'
+            echo '////////////////////////.....mmmmmmmmmmmmmmmmmmmm...////////'
+            echo '//////////////////////.....mmmmmmmmmmmmmmmmmmmmmm...////////'
+            echo '////////////////////....mmmmmmmmmmmmmmmmmmmmmmmmm...////////'
+            echo '///////////////////...mmmmmmmmmmmmmmmmmmmmmmmmmmm...////////'
+            echo '/////////////////....mmmmmmmmmmmmmmmmmmmmmmmmmm..../////////'
+            echo '///////////////....mmmmmmmmmmmmmmmmmmmmmmmmmmm....//////////'
+            echo '////////////.....mmmmmmmmmmmmmmmmmmmmmmmmmmm....////////////'
+            echo '/////////....mmmmmmmmmmmmmmmmmmmmmmmmmmmmmm..../////////////'
+            echo '///////....mmmmmmmmm css-burrito mmmmmmmm....///////////////'
+            echo '//////...........mmmmmmmmmmmmmmmmmmmmmmm....////////////////'
+            echo '//////....mmmmm....mmmmmmmmmmmmmmmmmmm....//////////////////'
+            echo '//////....mmmmmmm....mmmmmmmmmmmmmmm....////////////////////'
+            echo '////////...mmmmmmmm....mmmmmmmmmmm....//////////////////////'
+            echo '/////////.....mmmmmmm....mmmmmmm....////////////////////////'
+            echo '///////////....mmmmmmm....mmmm....//////////////////////////'
+            echo '/////////////....mmmmmm...mm....////////////////////////////'
+            echo '///////////////....mmmmm......//////////////////////////////'
+            echo '/////////////////........../////////////////////////////////'
+            echo '/////////////////////....///////////////////////////////////'
+            echo '////////////////////////////////////////////////////////////'
+            echo '////////////////////////////////////////////////////////////'
+            echo '////////////////////////////////////////////////////////////'
+            echo ''
+            echo 'Mmmmmmm! You have created a new file named _'$2'.scss,'
+            echo 'and it has been imported into the _modules.scss file.'
+            echo ''
+
+            touch _$2.scss
+
+            echo '// -------------------------------------' >> _$2.scss
+            echo '// - styles for the' $2 'module'          >> _$2.scss
+            echo '// -------------------------------------' >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo '// -------------------------------------' >> _$2.scss
+            echo '//  layout'                               >> _$2.scss
+            echo '//   _'                                   >> _$2.scss
+            echo '//  | |'                                  >> _$2.scss
+            echo '//  | |__'                                >> _$2.scss
+            echo '//  |____|'                               >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo '// -------------------------------------' >> _$2.scss
+            echo '//  skin'                                 >> _$2.scss
+            echo '//   ___   '                              >> _$2.scss
+            echo '//  / __|  '                              >> _$2.scss
+            echo '//  \__ \  '                              >> _$2.scss
+            echo '//  |___/  '                              >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo '// -------------------------------------' >> _$2.scss
+            echo '//  typography'                           >> _$2.scss
+            echo '//   _____  '                             >> _$2.scss
+            echo '//  |_   _| '                             >> _$2.scss
+            echo '//    | |   '                             >> _$2.scss
+            echo '//    |_|   '                             >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo '// -------------------------------------' >> _$2.scss
+            echo '//   components'                          >> _$2.scss
+            echo '//    ___  '                              >> _$2.scss
+            echo '//   / __| '                              >> _$2.scss
+            echo '//  | (__  '                              >> _$2.scss
+            echo '//   \___| '                              >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo '// -------------------------------------' >> _$2.scss
+            echo '//  states'                               >> _$2.scss
+            echo '//   ___   '                              >> _$2.scss
+            echo '//  / __|  '                              >> _$2.scss
+            echo '//  \__ \  '                              >> _$2.scss
+            echo '//  |___/  '                              >> _$2.scss
+            echo ''                                         >> _$2.scss
+            ;;
+        \?)
+            echo ''
+            echo '  ____     ____    _____     _____   _ '
+            echo ' / __ \   / __ \  |  __ \   / ____| | |'
+            echo '| |  | | | |  | | | |__) | | (___   | |'
+            echo '| |  | | | |  | | |  ___/   \___ \  | |'
+            echo '| |__| | | |__| | | |       ____) | |_|'
+            echo ' \____/   \____/  |_|      |_____/  (_)'
+            echo '                                       '
+            echo ''
+            echo '-'$OPTARG 'is not a valid option.'
+            echo ''
+            echo 'Please pass in -s, -m, or -l to generate small, medium, or large ascii comments.'
+            exit 1
+            ;;
+        :)
+            echo ''
+            echo '  ____     ____    _____     _____   _ '
+            echo ' / __ \   / __ \  |  __ \   / ____| | |'
+            echo '| |  | | | |  | | | |__) | | (___   | |'
+            echo '| |  | | | |  | | |  ___/   \___ \  | |'
+            echo '| |__| | | |__| | | |       ____) | |_|'
+            echo ' \____/   \____/  |_|      |_____/  (_)'
+            echo '                                       '
+            echo ''
+            echo 'Please pass in an additional argument - the name of your module.'
+            echo ''
+            echo 'The goal is to create a new module file, with default comments,'
+            echo 'and to @import the new file to the main _module.scss file.'
+            echo ''
+            exit 1
+            exit 1
+            ;;
+    esac
+
+    case $opt in
+        m)
+            echo ''
+            echo '////////////////////////////////////////////////////////////'
+            echo '////////////////////////////////////////////////////////////'
+            echo '////////////////////////////////////////////////////////////'
+            echo '//////////////////////////////////........./////////////////'
+            echo '///////////////////////////////.....mmmmm....///////////////'
+            echo '/////////////////////////////.....mmmmmmmmmm.../////////////'
+            echo '//////////////////////////.....mmmmmmmmmmmmmmmm...//////////'
+            echo '////////////////////////.....mmmmmmmmmmmmmmmmmmmm...////////'
+            echo '//////////////////////.....mmmmmmmmmmmmmmmmmmmmmm...////////'
+            echo '////////////////////....mmmmmmmmmmmmmmmmmmmmmmmmm...////////'
+            echo '///////////////////...mmmmmmmmmmmmmmmmmmmmmmmmmmm...////////'
+            echo '/////////////////....mmmmmmmmmmmmmmmmmmmmmmmmmm..../////////'
+            echo '///////////////....mmmmmmmmmmmmmmmmmmmmmmmmmmm....//////////'
+            echo '////////////.....mmmmmmmmmmmmmmmmmmmmmmmmmmm....////////////'
+            echo '/////////....mmmmmmmmmmmmmmmmmmmmmmmmmmmmmm..../////////////'
+            echo '///////....mmmmmmmmm css-burrito mmmmmmmm....///////////////'
+            echo '//////...........mmmmmmmmmmmmmmmmmmmmmmm....////////////////'
+            echo '//////....mmmmm....mmmmmmmmmmmmmmmmmmm....//////////////////'
+            echo '//////....mmmmmmm....mmmmmmmmmmmmmmm....////////////////////'
+            echo '////////...mmmmmmmm....mmmmmmmmmmm....//////////////////////'
+            echo '/////////.....mmmmmmm....mmmmmmm....////////////////////////'
+            echo '///////////....mmmmmmm....mmmm....//////////////////////////'
+            echo '/////////////....mmmmmm...mm....////////////////////////////'
+            echo '///////////////....mmmmm......//////////////////////////////'
+            echo '/////////////////........../////////////////////////////////'
+            echo '/////////////////////....///////////////////////////////////'
+            echo '////////////////////////////////////////////////////////////'
+            echo '////////////////////////////////////////////////////////////'
+            echo '////////////////////////////////////////////////////////////'
+            echo ''
+            echo 'Mmmmmmm! You have created a new file named _'$2'.scss,'
+            echo 'and it has been imported into the _modules.scss file.'
+            echo ''
+
+            touch _$2.scss
+
+            echo '// -------------------------------------' >> _$2.scss
+            echo '// - styles for the' $2 'module'          >> _$2.scss
+            echo '// -------------------------------------' >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo '// -------------------------------------' >> _$2.scss
+            echo '//  layout'                               >> _$2.scss
+            echo '//   _      '                             >> _$2.scss
+            echo '//  | |     '                             >> _$2.scss
+            echo '//  | |     '                             >> _$2.scss
+            echo '//  | |     '                             >> _$2.scss
+            echo '//  | |____ '                             >> _$2.scss
+            echo '//  |______|'                             >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo '// -------------------------------------' >> _$2.scss
+            echo '//  skin'                                 >> _$2.scss
+            echo '//    _____  '                            >> _$2.scss
+            echo '//   / ____| '                            >> _$2.scss
+            echo '//  | (___   '                            >> _$2.scss
+            echo '//   \___ \  '                            >> _$2.scss
+            echo '//   ____) | '                            >> _$2.scss
+            echo '//  |_____/  '                            >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo '// -------------------------------------' >> _$2.scss
+            echo '//  typography'                           >> _$2.scss
+            echo '//   _______ '                            >> _$2.scss
+            echo '//  |__   __|'                            >> _$2.scss
+            echo '//     | |   '                            >> _$2.scss
+            echo '//     | |   '                            >> _$2.scss
+            echo '//     | |   '                            >> _$2.scss
+            echo '//     |_|   '                            >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo '// -------------------------------------' >> _$2.scss
+            echo '//  components'                           >> _$2.scss
+            echo '//    _____  '                            >> _$2.scss
+            echo '//   / ____| '                            >> _$2.scss
+            echo '//  | |      '                            >> _$2.scss
+            echo '//  | |      '                            >> _$2.scss
+            echo '//  | |____  '                            >> _$2.scss
+            echo '//   \_____| '                            >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo '// -------------------------------------' >> _$2.scss
+            echo '//  states'                               >> _$2.scss
+            echo '//    _____  '                            >> _$2.scss
+            echo '//   / ____| '                            >> _$2.scss
+            echo '//  | (___   '                            >> _$2.scss
+            echo '//   \___ \  '                            >> _$2.scss
+            echo '//   ____) | '                            >> _$2.scss
+            echo '//  |_____/  '                            >> _$2.scss
+            echo ''                                         >> _$2.scss
+            ;;
+        \?)
+            echo ''
+            echo '  ____     ____    _____     _____   _ '
+            echo ' / __ \   / __ \  |  __ \   / ____| | |'
+            echo '| |  | | | |  | | | |__) | | (___   | |'
+            echo '| |  | | | |  | | |  ___/   \___ \  | |'
+            echo '| |__| | | |__| | | |       ____) | |_|'
+            echo ' \____/   \____/  |_|      |_____/  (_)'
+            echo '                                       '
+            echo ''
+            echo '-'$OPTARG 'is not a valid option.'
+            echo ''
+            echo 'Please pass in -s, -m, or -l to generate small, medium, or large ascii comments.'
+            exit 1
+            ;;
+        :)
+            echo ''
+            echo '  ____     ____    _____     _____   _ '
+            echo ' / __ \   / __ \  |  __ \   / ____| | |'
+            echo '| |  | | | |  | | | |__) | | (___   | |'
+            echo '| |  | | | |  | | |  ___/   \___ \  | |'
+            echo '| |__| | | |__| | | |       ____) | |_|'
+            echo ' \____/   \____/  |_|      |_____/  (_)'
+            echo '                                       '
+            echo ''
+            echo 'Please pass in an additional argument - the name of your module.'
+            echo ''
+            echo 'The goal is to create a new module file, with default comments,'
+            echo 'and to @import the new file to the main _module.scss file.'
+            echo ''
+            exit 1
+            exit 1
+            ;;
+    esac
+
+    case $opt in
+        l)
+            echo ''
+            echo '////////////////////////////////////////////////////////////'
+            echo '////////////////////////////////////////////////////////////'
+            echo '////////////////////////////////////////////////////////////'
+            echo '//////////////////////////////////........./////////////////'
+            echo '///////////////////////////////.....mmmmm....///////////////'
+            echo '/////////////////////////////.....mmmmmmmmmm.../////////////'
+            echo '//////////////////////////.....mmmmmmmmmmmmmmmm...//////////'
+            echo '////////////////////////.....mmmmmmmmmmmmmmmmmmmm...////////'
+            echo '//////////////////////.....mmmmmmmmmmmmmmmmmmmmmm...////////'
+            echo '////////////////////....mmmmmmmmmmmmmmmmmmmmmmmmm...////////'
+            echo '///////////////////...mmmmmmmmmmmmmmmmmmmmmmmmmmm...////////'
+            echo '/////////////////....mmmmmmmmmmmmmmmmmmmmmmmmmm..../////////'
+            echo '///////////////....mmmmmmmmmmmmmmmmmmmmmmmmmmm....//////////'
+            echo '////////////.....mmmmmmmmmmmmmmmmmmmmmmmmmmm....////////////'
+            echo '/////////....mmmmmmmmmmmmmmmmmmmmmmmmmmmmmm..../////////////'
+            echo '///////....mmmmmmmmm css-burrito mmmmmmmm....///////////////'
+            echo '//////...........mmmmmmmmmmmmmmmmmmmmmmm....////////////////'
+            echo '//////....mmmmm....mmmmmmmmmmmmmmmmmmm....//////////////////'
+            echo '//////....mmmmmmm....mmmmmmmmmmmmmmm....////////////////////'
+            echo '////////...mmmmmmmm....mmmmmmmmmmm....//////////////////////'
+            echo '/////////.....mmmmmmm....mmmmmmm....////////////////////////'
+            echo '///////////....mmmmmmm....mmmm....//////////////////////////'
+            echo '/////////////....mmmmmm...mm....////////////////////////////'
+            echo '///////////////....mmmmm......//////////////////////////////'
+            echo '/////////////////........../////////////////////////////////'
+            echo '/////////////////////....///////////////////////////////////'
+            echo '////////////////////////////////////////////////////////////'
+            echo '////////////////////////////////////////////////////////////'
+            echo '////////////////////////////////////////////////////////////'
+            echo ''
+            echo 'Mmmmmmm! You have created a new file named _'$2'.scss,'
+            echo 'and it has been imported into the _modules.scss file.'
+            echo ''
+
+            touch _$2.scss
+
+            echo '// -------------------------------------' >> _$2.scss
+            echo '// - styles for the' $2 'module'          >> _$2.scss
+            echo '// -------------------------------------' >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo '// -------------------------------------' >> _$2.scss
+            echo '//  layout'                               >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo '//  lllllllllll'                          >> _$2.scss
+            echo '//  l:::::::::l'                          >> _$2.scss
+            echo '//  l:::::::::l'                          >> _$2.scss
+            echo '//  ll:::::::ll'                          >> _$2.scss
+            echo '//    l:::::l'                            >> _$2.scss
+            echo '//    l:::::l'                            >> _$2.scss
+            echo '//    l:::::l'                            >> _$2.scss
+            echo '//    l:::::l'                            >> _$2.scss
+            echo '//    l:::::l'                            >> _$2.scss
+            echo '//    l:::::l'                            >> _$2.scss
+            echo '//    l:::::l'                            >> _$2.scss
+            echo '//    l:::::l         llllll'             >> _$2.scss
+            echo '//  ll:::::::lllllllll:::::l'             >> _$2.scss
+            echo '//  l::::::::::::::::::::::l'             >> _$2.scss
+            echo '//  l::::::::::::::::::::::l'             >> _$2.scss
+            echo '//  llllllllllllllllllllllll'             >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo '// -------------------------------------' >> _$2.scss
+            echo '//  skin'                                 >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo '//     sssssssssssssss'                   >> _$2.scss
+            echo '//   ss:::::::::::::::s'                  >> _$2.scss
+            echo '//  s:::::ssssss::::::s'                  >> _$2.scss
+            echo '//  s:::::s     sssssss'                  >> _$2.scss
+            echo '//  s:::::s'                              >> _$2.scss
+            echo '//  s:::::s'                              >> _$2.scss
+            echo '//   s::::ssss'                           >> _$2.scss
+            echo '//    ss::::::sssss'                      >> _$2.scss
+            echo '//      sss::::::::ss'                    >> _$2.scss
+            echo '//         ssssss::::s'                   >> _$2.scss
+            echo '//              s:::::s'                  >> _$2.scss
+            echo '//              s:::::s'                  >> _$2.scss
+            echo '//  sssssss     s:::::s'                  >> _$2.scss
+            echo '//  s::::::ssssss:::::s'                  >> _$2.scss
+            echo '//  s:::::::::::::::ss'                   >> _$2.scss
+            echo '//   sssssssssssssss'                     >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo '// -------------------------------------' >> _$2.scss
+            echo '//  typography'                           >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo '//  ttttttttttttttttttttttt'              >> _$2.scss
+            echo '//  t:::::::::::::::::::::t'              >> _$2.scss
+            echo '//  t:::::::::::::::::::::t'              >> _$2.scss
+            echo '//  t:::::tt:::::::tt:::::t'              >> _$2.scss
+            echo '//  tttttt  t:::::t  tttttt'              >> _$2.scss
+            echo '//          t:::::t'                      >> _$2.scss
+            echo '//          t:::::t'                      >> _$2.scss
+            echo '//          t:::::t'                      >> _$2.scss
+            echo '//          t:::::t'                      >> _$2.scss
+            echo '//          t:::::t'                      >> _$2.scss
+            echo '//          t:::::t'                      >> _$2.scss
+            echo '//          t:::::t'                      >> _$2.scss
+            echo '//        tt:::::::tt'                    >> _$2.scss
+            echo '//        t:::::::::t'                    >> _$2.scss
+            echo '//        t:::::::::t'                    >> _$2.scss
+            echo '//        ttttttttttt'                    >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo '// -------------------------------------' >> _$2.scss
+            echo '//  components'                           >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo '//          ccccccccccccc'                >> _$2.scss
+            echo '//       ccc::::::::::::c'                >> _$2.scss
+            echo '//     cc:::::::::::::::c'                >> _$2.scss
+            echo '//    c:::::cccccccc::::c'                >> _$2.scss
+            echo '//   c:::::c       cccccc'                >> _$2.scss
+            echo '//  c:::::c'                              >> _$2.scss
+            echo '//  c:::::c'                              >> _$2.scss
+            echo '//  c:::::c'                              >> _$2.scss
+            echo '//  c:::::c'                              >> _$2.scss
+            echo '//  c:::::c'                              >> _$2.scss
+            echo '//  c:::::c'                              >> _$2.scss
+            echo '//   c:::::c       cccccc'                >> _$2.scss
+            echo '//    c:::::cccccccc::::c'                >> _$2.scss
+            echo '//     cc:::::::::::::::c'                >> _$2.scss
+            echo '//       ccc::::::::::::c'                >> _$2.scss
+            echo '//          ccccccccccccc'                >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo ''                                         >> _$2.scss
+            echo '// -------------------------------------' >> _$2.scss
+            echo '//  states'                               >> _$2.scss
+            echo '//'                                       >> _$2.scss
+            echo '//     sssssssssssssss'                   >> _$2.scss
+            echo '//   ss:::::::::::::::s'                  >> _$2.scss
+            echo '//  s:::::ssssss::::::s'                  >> _$2.scss
+            echo '//  s:::::s     sssssss'                  >> _$2.scss
+            echo '//  s:::::s'                              >> _$2.scss
+            echo '//  s:::::s'                              >> _$2.scss
+            echo '//   s::::ssss'                           >> _$2.scss
+            echo '//    ss::::::sssss'                      >> _$2.scss
+            echo '//      sss::::::::ss'                    >> _$2.scss
+            echo '//         ssssss::::s'                   >> _$2.scss
+            echo '//              s:::::s'                  >> _$2.scss
+            echo '//              s:::::s'                  >> _$2.scss
+            echo '//  sssssss     s:::::s'                  >> _$2.scss
+            echo '//  s::::::ssssss:::::s'                  >> _$2.scss
+            echo '//  s:::::::::::::::ss'                   >> _$2.scss
+            echo '//   sssssssssssssss'                     >> _$2.scss
+            echo ''                                         >> _$2.scss
+            ;;
+        \?)
+            echo ''
+            echo '  ____     ____    _____     _____   _ '
+            echo ' / __ \   / __ \  |  __ \   / ____| | |'
+            echo '| |  | | | |  | | | |__) | | (___   | |'
+            echo '| |  | | | |  | | |  ___/   \___ \  | |'
+            echo '| |__| | | |__| | | |       ____) | |_|'
+            echo ' \____/   \____/  |_|      |_____/  (_)'
+            echo '                                       '
+            echo ''
+            echo '-'$OPTARG 'is not a valid option.'
+            echo ''
+            echo 'Please pass in -s, -m, or -l to generate small, medium, or large ascii comments.'
+            exit 1
+            ;;
+        :)
+            echo ''
+            echo '  ____     ____    _____     _____   _ '
+            echo ' / __ \   / __ \  |  __ \   / ____| | |'
+            echo '| |  | | | |  | | | |__) | | (___   | |'
+            echo '| |  | | | |  | | |  ___/   \___ \  | |'
+            echo '| |__| | | |__| | | |       ____) | |_|'
+            echo ' \____/   \____/  |_|      |_____/  (_)'
+            echo '                                       '
+            echo ''
+            echo 'Please pass in an additional argument - the name of your module.'
+            echo ''
+            echo 'The goal is to create a new module file, with default comments,'
+            echo 'and to @import the new file to the main _module.scss file.'
+            echo ''
+            exit 1
+            exit 1
+            ;;
+    esac
+done
 
 echo '// Modules' > _modules.scss
 
