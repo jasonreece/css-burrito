@@ -98,10 +98,7 @@ hologram-base () {
   echo '*/' >> $1
 }
 
-if [ $# -eq 0 ] ; then
-  make-burrito
-  ascii-burrito
-else
+check-for-hologram () {
   local OPTIND
   while getopts ":hH" opt; do
     case $opt in
@@ -123,4 +120,11 @@ else
         ;;
     esac
   done
+}
+
+if [ $# -eq 0 ] ; then
+  make-burrito
+  ascii-burrito
+else
+  check-for-hologram
 fi
