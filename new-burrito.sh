@@ -1,49 +1,30 @@
 #! /bin/bash
 
-git clone https://github.com/jasonreece/css-burrito.git
+source .functions
 
-cd css-burrito
-
-rm -r -f LICENSE.md README.md burrito.sh new-burrito.sh burrito-component.sh package.json setup.sh
-
-cd ../
-
-mv css-burrito/* .
-
-rm -r -f css-burrito/
-
-
-
-echo ''
-echo '////////////////////////////////////////////////////////////'
-echo '////////////////////////////////////////////////////////////'
-echo '////////////////////////////////////////////////////////////'
-echo '//////////////////////////////////........./////////////////'
-echo '///////////////////////////////.....mmmmm....///////////////'
-echo '/////////////////////////////.....mmmmmmmmmm.../////////////'
-echo '//////////////////////////.....mmmmmmmmmmmmmmmm...//////////'
-echo '////////////////////////.....mmmmmmmmmmmmmmmmmmmm...////////'
-echo '//////////////////////.....mmmmmmmmmmmmmmmmmmmmmm...////////'
-echo '////////////////////....mmmmmmmmmmmmmmmmmmmmmmmmm...////////'
-echo '///////////////////...mmmmmmmmmmmmmmmmmmmmmmmmmmm...////////'
-echo '/////////////////....mmmmmmmmmmmmmmmmmmmmmmmmmm..../////////'
-echo '///////////////....mmmmmmmmmmmmmmmmmmmmmmmmmmm....//////////'
-echo '////////////.....mmmmmmmmmmmmmmmmmmmmmmmmmmm....////////////'
-echo '/////////....mmmmmmmmmmmmmmmmmmmmmmmmmmmmmm..../////////////'
-echo '///////....mmmmmmmmm css-burrito mmmmmmmm....///////////////'
-echo '//////...........mmmmmmmmmmmmmmmmmmmmmmm....////////////////'
-echo '//////....mmmmm....mmmmmmmmmmmmmmmmmmm....//////////////////'
-echo '//////....mmmmmmm....mmmmmmmmmmmmmmm....////////////////////'
-echo '////////...mmmmmmmm....mmmmmmmmmmm....//////////////////////'
-echo '/////////.....mmmmmmm....mmmmmmm....////////////////////////'
-echo '///////////....mmmmmmm....mmmm....//////////////////////////'
-echo '/////////////....mmmmmm...mm....////////////////////////////'
-echo '///////////////....mmmmm......//////////////////////////////'
-echo '/////////////////........../////////////////////////////////'
-echo '/////////////////////....///////////////////////////////////'
-echo '////////////////////////////////////////////////////////////'
-echo '////////////////////////////////////////////////////////////'
-echo '////////////////////////////////////////////////////////////'
-echo ''
-echo "Mmmmmmm!  You've successfully added css-burrito to your project."
-echo ''
+if [ $# -eq 0 ] ; then
+  make-burrito
+  ascii-burrito
+else
+  local OPTIND
+  while getopts ":hH" opt; do
+    case $opt in
+      h)
+        make-burrito
+        hologram-base stylesheets/core/_base.scss
+        ascii-burrito
+        ;;
+      H)
+        make-burrito
+        hologram-base stylesheets/core/_base.scss
+        ascii-burrito
+        ;;
+      \?)
+        ascii-oops
+        echo "Invalid option: -$OPTARG"
+        echo "You can create a new project with burrito-new"
+        echo "Or you can add a new project with Hologram documentation by running burrito-new -h"
+        ;;
+    esac
+  done
+fi
