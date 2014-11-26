@@ -1,6 +1,6 @@
 #! /bin/bash
 
-source css-burrito/.functions
+source "./.functions"
 
 if [ $# -eq 0 ] ; then
   make-burrito
