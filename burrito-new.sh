@@ -3,7 +3,7 @@
 make-burrito () {
   git clone https://github.com/jasonreece/css-burrito.git
 
-  for file in LICENSE.md README.md burrito.sh new-burrito.sh burrito-component.sh package.json; do
+  for file in LICENSE.md README.md burrito.sh burrito-new.sh burrito-component.sh package.json; do
     rm -r -f css-burrito/"$file"
   done
 
