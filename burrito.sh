@@ -77,8 +77,8 @@ check-for-ascii () {
           touch _$i.scss
 
           echo '// - - - - - - - - - - - - - - - - - - -' >> _$i.scss
-          echo '// - - styles for the' $i 'module'        >> _$i.scss
-          echo ''                                         >> _$i.scss
+          echo '// - - '$i 'module'                       >> _$i.scss
+          echo '// styles for the' $i 'module'            >> _$i.scss
           echo ''                                         >> _$i.scss
           echo '// - - - - - - - - - - - - - - - - - - -' >> _$i.scss
           echo '// - - layout'                            >> _$i.scss
@@ -132,8 +132,8 @@ check-for-ascii () {
           touch _$i.scss
 
           echo '// - - - - - - - - - - - - - - - - - - -' >> _$i.scss
-          echo '// - - styles for the' $i 'module'        >> _$i.scss
-          echo ''                                         >> _$i.scss
+          echo '// - - '$i 'module'                       >> _$i.scss
+          echo '// styles for the' $i 'module'            >> _$i.scss
           echo ''                                         >> _$i.scss
           echo '// - - - - - - - - - - - - - - - - - - -' >> _$i.scss
           echo '// - - layout'                            >> _$i.scss
@@ -197,9 +197,10 @@ check-for-ascii () {
           touch _$i.scss
 
           echo '// - - - - - - - - - - - - - - - - - - -' >> _$i.scss
-          echo '// -  - styles for the' $i 'module'       >> _$i.scss
-          echo ''                                         >> _$i.scss
+          echo '// - - '$i 'module'                       >> _$i.scss
+          echo '// styles for the' $i 'module'            >> _$i.scss
           echo '// - - - - - - - - - - - - - - - - - - -' >> _$i.scss
+          echo ''                                         >> _$i.scss
           echo '// - - layout'                            >> _$i.scss
           echo ''                                         >> _$i.scss
           echo '//  lllllllllll'                          >> _$i.scss
@@ -378,7 +379,8 @@ else
     touch _$i.scss
 
     echo '// - - - - - - - - - - - - - - - - - - -' >> _$i.scss
-    echo '// - - styles for the' $i 'module'        >> _$i.scss
+    echo '// - - '$i 'module'                       >> _$i.scss
+    echo '// styles for the' $i 'module'            >> _$i.scss
   done
   add-to-modules
 fi
