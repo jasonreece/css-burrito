@@ -39,24 +39,24 @@ if [ $# -ne 2 ]; then
     exit 1
 fi
 
-echo '// - - '$1'-'$2 >> snippet.txt
-echo '%'$1'-l-'$2' {' >> snippet.txt
-echo '  ' >> snippet.txt
-echo '}' >> snippet.txt
+echo '  // - - '$1'-'$2 >> snippet.txt
+echo '  %'$1'-l-'$2' {' >> snippet.txt
 echo '' >> snippet.txt
-echo '%'$1'-s-'$2' {' >> snippet.txt
-echo '  ' >> snippet.txt
-echo '}' >> snippet.txt
+echo '  }' >> snippet.txt
 echo '' >> snippet.txt
-echo '%'$1'-t-'$2' {' >> snippet.txt
-echo '  ' >> snippet.txt
-echo '}' >> snippet.txt
+echo '  %'$1'-s-'$2' {' >> snippet.txt
 echo '' >> snippet.txt
-echo '.'$1'-c-'$2' {' >> snippet.txt
-echo '  @extend %'$1'-l-'$2';' >> snippet.txt
-echo '  @extend %'$1'-s-'$2';' >> snippet.txt
-echo '  @extend %'$1'-t-'$2';' >> snippet.txt
-echo '}' >> snippet.txt
+echo '  }' >> snippet.txt
+echo '' >> snippet.txt
+echo '  %'$1'-t-'$2' {' >> snippet.txt
+echo '' >> snippet.txt
+echo '  }' >> snippet.txt
+echo '' >> snippet.txt
+echo '  .'$1'-c-'$2' {' >> snippet.txt
+echo '    @extend %'$1'-l-'$2';' >> snippet.txt
+echo '    @extend %'$1'-s-'$2';' >> snippet.txt
+echo '    @extend %'$1'-t-'$2';' >> snippet.txt
+echo '  }' >> snippet.txt
 
 echo ''
 echo '  ////////////////////////////////////////////////////////////'
