@@ -1,62 +1,64 @@
-// css-burrito v1.3 | MIT License | github.com/jasonreece/css-burrito
+// - - css-burrito v1.3 | mit license | github.com/jasonreece/css-burrito
 
-// -------------------------------------
-//   Application.scss
-// -------------------------------------
-// ----- Contains an import section for libs, core, and modules, the inbox,
-// ----- and a shame section for quick fixes and hacks ----- //
+// - - - - - - - - - - - - - - - - - - -
+// - - application.scss
+// contains an import section for libs, core, and modules, the inbox,
+// and a shame section for quick fixes and hacks.
 
-// -------------------------------------
-//   Libs
-// -------------------------------------
 
-// ----- Variable overrides for Bootstrap and other libraries ----- //
+// - - - - - - - - - - - - - - - - - - -
+// - - libs
+// add css frameworks and libraries here.
+// be sure to load them after the variable overrides file
+// if you want to change variable values.
+
+// - - variable overrides for sass libraries
 // @import "libs/library-variable-overrides";
 
-// ----- Reset - Normalize.css v3.0.2 ----- //
+// - - reset - normalize.css v3.0.2
 // @import "libs/normalize";
 
-// ----- Compass - Setup: http://compass-style.org/help/ ----- //
-// ----- Run compass create on project root ----- //
-// ----- Delete generated ie, print, and screen files ----- //
-// ----- Update paths on config.rb ----- //
-// @import "compass";
 
+// - - - - - - - - - - - - - - - - - - -
+// - - core
 
-// -------------------------------------
-//   Core
-// -------------------------------------
-
-// ----- Settings - @Font-Face Declarations, Variables ----- //
+// - - core/settings
+// @font-face declarations, variables
 @import "core/settings";
 
-// ----- Utilities - Extends, Functions, and Mixins ----- //
+// - - core/utilities
+// extends, functions, and mixins
 @import "core/utilities";
 
-// ----- Base - Base-level tags (body, p, etc.) ----- //
+// - - core/base
+// base-level tags (body, p, etc.)
 @import "core/base";
 
-// ----- Layout - Margin, Padding, Sizing ----- //
+// - - core/layout
+// margin, padding, sizing
 @import "core/layout";
 
-// ----- Skin - Backgrounds, Borders, Box-shadow, etc ----- //
+// - - core/skin
+// backgrounds, borders, box-shadow, etc
 @import "core/skin";
 
-// ----- Typography - Fonts and Colors ----- //
+// - - core/typography
+// fonts and colors
 @import "core/typography";
 
-// ----- Modules - Imports all module files. ----- //
+
+// - - - - - - - - - - - - - - - - - - -
+// - - modules
+// add new modules to the modules/_modules.scss file and they'll get pulled in here.
 @import "modules/modules";
 
 
-// -------------------------------------
-//   Inbox
-// -------------------------------------
-// ----- The inbox allows developers, and those not actively working on the CSS,
+// - - - - - - - - - - - - - - - - - - -
+// - - inbox
+// the inbox allows developers, and those not actively working on the project
 // to quickly add styles that are easily seen by the maintainer of the file.
 
 
-// -------------------------------------
-//   Shame
-// -------------------------------------
-// ----- Need to add a quick fix, hack, or questionable technique?  Add it here, fix it later.
+// - - - - - - - - - - - - - - - - - - -
+// - - shame
+// need to add a quick fix, hack, or questionable technique?  add it here, fix it later.

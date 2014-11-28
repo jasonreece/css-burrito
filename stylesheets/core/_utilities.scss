@@ -1,14 +1,12 @@
-// -------------------------------------
-//   Utilities
-// -------------------------------------
-// ----- Placeholders Extends, Mixins, Functions, and Utility Classes
-// -------------------------------------
+// - - - - - - - - - - - - - - - - - - -
+// - - utilities
+// placeholders extends, mixins, functions, and utility classes
 
-// -------------------------------------
-//   Placeholder Extends
-// -------------------------------------
 
-// ----- Clearfix ----- //
+// - - - - - - - - - - - - - - - - - - -
+// - - placeholder extends
+
+// - - clearfix
 // %clearfix:before,
 // %clearfix:after {
 //   content: " ";
@@ -23,19 +21,19 @@
 //   *zoom: 1;
 // }
 
+// - - - - - - - - - - - - - - - - - - -
+// - - mixins
 
-// -------------------------------------
-//   Mixins
-// -------------------------------------
-
-// ----- Adds responsive breakpoints. ----- //
+// - - breakpoint
+// adds responsive breakpoints.
 // @mixin breakpoint($width) {
 //   @media (min-width: $width) {
 //     @content;
 //   }
 // }
 
-// ----- Adds accessibility pseudo selectors to hover states. ----- //
+// - - attention
+// adds accessibility pseudo selectors to hover states.
 // @mixin attention() {
 //   &:hover,
 //   &:active,
@@ -44,17 +42,16 @@
 //   }
 // }
 
-// Rem sizing mixin with px fallback.
+// - - rem-sizing
+// rem sizing mixin with px fallback.
 // @mixin rem-sizing($property, $size) {
 //   #{$property}: $size * 10px;
 //   #{$property}: $size * 1rem;
 // }
 
-// -------------------------------------
-//   Functions
-// -------------------------------------
+// - - - - - - - - - - - - - - - - - - -
+// - - functions
 
 
-// -------------------------------------
-//   Utilities
-// -------------------------------------
+// - - - - - - - - - - - - - - - - - - -
+// - - utilities

@@ -1,124 +1,142 @@
-// -------------------------------------
-// - Example-module Module
-// -------------------------------------
-// ----- Styles for the Example-module Module
-// -------------------------------------
+// - - - - - - - - - - - - - - - - - - -
+// - - example-module module
+// styles for the example-module module
 
-// -------------------------------------
-//   Layout
-
-//    LLLLLLLLLLL
-//    L:::::::::L
-//    L:::::::::L
-//    LL:::::::LL
-//      L:::::L
-//      L:::::L
-//      L:::::L
-//      L:::::L
-//      L:::::L
-//      L:::::L
-//      L:::::L
-//      L:::::L         LLLLLL
-//    LL:::::::LLLLLLLLL:::::L
-//    L::::::::::::::::::::::L
-//    L::::::::::::::::::::::L
-//    LLLLLLLLLLLLLLLLLLLLLLLL
+// - - - - - - - - - - - - - - - - - - -
+// - - layout
 //
-// -------------------------------------
+//  lllllllllll
+//  l:::::::::l
+//  l:::::::::l
+//  ll:::::::ll
+//    l:::::l
+//    l:::::l
+//    l:::::l
+//    l:::::l
+//    l:::::l
+//    l:::::l
+//    l:::::l
+//    l:::::l         llllll
+//  ll:::::::lllllllll:::::l
+//  l::::::::::::::::::::::l
+//  l::::::::::::::::::::::l
+//  llllllllllllllllllllllll
+
+// .example-module-l-descriptive-name {
+//   layout-styles
+// }
 
 
 // -------------------------------------
-//   Skin
-
+//  - - skin
 //
-//      SSSSSSSSSSSSSSS
-//    SS:::::::::::::::S
-//   S:::::SSSSSS::::::S
-//   S:::::S     SSSSSSS
-//   S:::::S
-//   S:::::S
-//    S::::SSSS
-//     SS::::::SSSSS
-//       SSS::::::::SS
-//          SSSSSS::::S
-//               S:::::S
-//               S:::::S
-//   SSSSSSS     S:::::S
-//   S::::::SSSSSS:::::S
-//   S:::::::::::::::SS
-//    SSSSSSSSSSSSSSS
+//     sssssssssssssss
+//   ss:::::::::::::::s
+//  s:::::ssssss::::::s
+//  s:::::s     sssssss
+//  s:::::s
+//  s:::::s
+//   s::::ssss
+//    ss::::::sssss
+//      sss::::::::ss
+//         ssssss::::s
+//              s:::::s
+//              s:::::s
+//  sssssss     s:::::s
+//  s::::::ssssss:::::s
+//  s:::::::::::::::ss
+//   sssssssssssssss
+
+// .example-module-s-descriptive-name {
+//   skin-styles
+// }
+
+
+// - - - - - - - - - - - - - - - - - - -
+// - - typography
+
+//  ttttttttttttttttttttttt
+//  t:::::::::::::::::::::t
+//  t:::::::::::::::::::::t
+//  t:::::tt:::::::tt:::::t
+//  tttttt  t:::::t  tttttt
+//          t:::::t
+//          t:::::t
+//          t:::::t
+//          t:::::t
+//          t:::::t
+//          t:::::t
+//          t:::::t
+//        tt:::::::tt
+//        t:::::::::t
+//        t:::::::::t
+//        ttttttttttt
+
+// .example-module-t-descriptive-name {
+//   typography-styles
+// }
+
+
+// - - - - - - - - - - - - - - - - - - -
+// - - components
 //
-// -------------------------------------
+//          ccccccccccccc
+//       ccc::::::::::::c
+//     cc:::::::::::::::c
+//    c:::::cccccccc::::c
+//   c:::::c       cccccc
+//  c:::::c
+//  c:::::c
+//  c:::::c
+//  c:::::c
+//  c:::::c
+//  c:::::c
+//   c:::::c       cccccc
+//    c:::::cccccccc::::c
+//     cc:::::::::::::::c
+//       ccc::::::::::::c
+//          ccccccccccccc
+
+// - - example-module-descriptive-name
+// %example-module-l-descriptive-name {
+//   layout-placeholder-styles
+// }
+
+// %example-module-s-descriptive-name {
+//   skin-placeholder-styles
+// }
+
+// %example-module-t-descriptive-name {
+//   typography-placeholder-styles
+// }
+
+// .example-module-c-descriptive-name {
+//   @extend %example-module-l-descriptive-name;
+//   @extend %example-module-s-descriptive-name;
+//   @extend %example-module-t-descriptive-name;
+// }
 
 
 // -------------------------------------
-//   Typography
-
-//   TTTTTTTTTTTTTTTTTTTTTTT
-//   T:::::::::::::::::::::T
-//   T:::::::::::::::::::::T
-//   T:::::TT:::::::TT:::::T
-//   TTTTTT  T:::::T  TTTTTT
-//           T:::::T
-//           T:::::T
-//           T:::::T
-//           T:::::T
-//           T:::::T
-//           T:::::T
-//           T:::::T
-//         TT:::::::TT
-//         T:::::::::T
-//         T:::::::::T
-//         TTTTTTTTTTT
+//  - - states
 //
-// -------------------------------------
+//     sssssssssssssss
+//   ss:::::::::::::::s
+//  s:::::ssssss::::::s
+//  s:::::s     sssssss
+//  s:::::s
+//  s:::::s
+//   s::::ssss
+//    ss::::::sssss
+//      sss::::::::ss
+//         ssssss::::s
+//              s:::::s
+//              s:::::s
+//  sssssss     s:::::s
+//  s::::::ssssss:::::s
+//  s:::::::::::::::ss
+//   sssssssssssssss
 
-
-// -------------------------------------
-//   Components
-
-//
-//
-//           CCCCCCCCCCCCC
-//        CCC::::::::::::C
-//      CC:::::::::::::::C
-//     C:::::CCCCCCCC::::C
-//    C:::::C       CCCCCC
-//   C:::::C
-//   C:::::C
-//   C:::::C
-//   C:::::C
-//   C:::::C
-//   C:::::C
-//    C:::::C       CCCCCC
-//     C:::::CCCCCCCC::::C
-//      CC:::::::::::::::C
-//        CCC::::::::::::C
-//           CCCCCCCCCCCCC
-//
-// -------------------------------------
-
-
-// -------------------------------------
-//   States
-
-//
-//      SSSSSSSSSSSSSSS
-//    SS:::::::::::::::S
-//   S:::::SSSSSS::::::S
-//   S:::::S     SSSSSSS
-//   S:::::S
-//   S:::::S
-//    S::::SSSS
-//     SS::::::SSSSS
-//       SSS::::::::SS
-//          SSSSSS::::S
-//               S:::::S
-//               S:::::S
-//   SSSSSSS     S:::::S
-//   S::::::SSSSSS:::::S
-//   S:::::::::::::::SS
-//    SSSSSSSSSSSSSSS
-//
-// -------------------------------------
-
+// .example-module-is-collapsed {
+//   max-height: 0;
+// }
