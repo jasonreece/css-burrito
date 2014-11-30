@@ -374,6 +374,7 @@ check-options () {
       ;;
       [nN])
         make-burrito
+        ascii-burrito
       ;;
       [hH])
         make-burrito
@@ -461,25 +462,92 @@ make-burrito () {
 hologram-base () {
   # Requires one argument - the path to the file.
   # hologram-base stylesheets/core/_base.scss
-  echo '' >> $1
-  echo '// - - - - - - - - - - - - - - - - - - -  ' >> $1
-  echo '//  documentation' >> $1
-  echo '// - - - - - - - - - - - - - - - - - - -  ' >> $1
-  echo '' >> $1
-  echo '' >> $1
-  echo '/*doc ' >> $1
-  echo '--- ' >> $1
-  echo 'title: Headings' >> $1
-  echo 'name: headings' >> $1
+  echo '/*doc' >> $1
+  echo '---' >> $1
+  echo 'title: typography' >> $1
+  echo 'name: 01-typography' >> $1
   echo 'category: base' >> $1
   echo '---' >> $1
-  echo '```html_example ' >> $1
-      echo '<h1>The quick brown fox...</h1>' >> $1
-      echo '<h2>The quick brown fox...</h2>' >> $1
-      echo '<h3>The quick brown fox...</h3>' >> $1
-      echo '<h4>The quick brown fox...</h4>' >> $1
-      echo '<h5>The quick brown fox...</h5>' >> $1
-      echo '<h6>The quick brown fox...</h6>' >> $1
+  echo '```html_example' >> $1
+  echo '<h1>h1 - The quick brown fox...</h1>' >> $1
+  echo '<h2>h2 - The quick brown fox...</h2>' >> $1
+  echo '<h3>h3 - The quick brown fox...</h3>' >> $1
+  echo '<h4>h4 - The quick brown fox...</h4>' >> $1
+  echo '<h5>h5 - The quick brown fox...</h5>' >> $1
+  echo '<h6>h6 - The quick brown fox...</h6>' >> $1
+  echo '<p>p - The quick brown fox...</p>' >> $1
+  echo '<a href="#">a - The quick brown fox...</a>' >> $1
+  echo '<form>' >> $1
+  echo '  <label>label - The quick brown fox...</label>' >> $1
+  echo '</form>' >> $1
+  echo '```' >> $1
+  echo '*/' >> $1
+
+  echo '' >> $1
+  echo '/*doc' >> $1
+  echo '---' >> $1
+  echo 'title: form-elements' >> $1
+  echo 'name: 02-form-elements' >> $1
+  echo 'category: base' >> $1
+  echo '---' >> $1
+  echo '```html_example' >> $1
+  echo '<form>' >> $1
+  echo '  <input type="text" placeholder="input-type-text">' >> $1
+  echo '</form>' >> $1
+  echo '' >> $1
+  echo '<form>' >> $1
+  echo '  <label for="checkbox"><input type="checkbox" id="checkbox" name="checkbox">checkbox</label>' >> $1
+  echo '</form>' >> $1
+  echo '' >> $1
+  echo '<form>' >> $1
+  echo '  <input type="radio" name="radio" id="one" checked>' >> $1
+  echo '  <label for="one">radio-btn-one</label>' >> $1
+  echo '  <input type="radio" name="radio" id="two">' >> $1
+  echo '  <label for="two">radio-btn-two</label>' >> $1
+  echo '</form>' >> $1
+  echo '' >> $1
+  echo '<form>' >> $1
+  echo '  <textarea placeholder="textarea"></textarea>' >> $1
+  echo '</form>' >> $1
+  echo '' >> $1
+  echo '<form>' >> $1
+  echo '  <select>' >> $1
+  echo '    <option>one</option>' >> $1
+  echo '    <option>two</option>' >> $1
+  echo '    <option>three</option>' >> $1
+  echo '  </select>' >> $1
+  echo '</form>' >> $1
+  echo '' >> $1
+  echo '<form>' >> $1
+  echo '  <input type="search" placeholder="input-type-search">' >> $1
+  echo '</form>' >> $1
+  echo '' >> $1
+  echo '<form>' >> $1
+  echo '  <input type="button" value="input-type-button">' >> $1
+  echo '</form>' >> $1
+  echo '' >> $1
+  echo '<form>' >> $1
+  echo '  <input type="submit" value="input-type-submit">' >> $1
+  echo '</form>' >> $1
+  echo '' >> $1
+  echo '<form>' >> $1
+  echo '  input-type-number' >> $1
+  echo '  <input type="number" name="quantity" min="1" max="5">' >> $1
+  echo '</form>' >> $1
+  echo '' >> $1
+  echo '<form>' >> $1
+  echo '  input-type-date' >> $1
+  echo '  <input type="date" name="bday">' >> $1
+  echo '</form>' >> $1
+  echo '' >> $1
+  echo '<form>' >> $1
+  echo '  input-type-color' >> $1
+  echo '  <input type="color" name="favcolor">' >> $1
+  echo '</form>' >> $1
+  echo '' >> $1
+  echo '<form>' >> $1
+  echo '  <input type="range" name="points" min="0" max="10">' >> $1
+  echo '</form>' >> $1
   echo '```' >> $1
   echo '*/' >> $1
 }
