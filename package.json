@@ -1,6 +1,6 @@
 {
   "name": "css-burrito",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "An organizational Sass template",
   "main": "index.js",
   "scripts": {
@@ -8,9 +8,7 @@
   },
   "preferGlobal": "true",
   "bin":  {
-    "burrito-new": "./burrito-new.sh",
-    "burrito": "./burrito.sh",
-    "burrito-c": "./burrito-component.sh"
+    "burrito": "./burrito.sh"
   },
   "repository": {
     "type": "git",
