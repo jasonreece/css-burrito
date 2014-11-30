@@ -462,6 +462,12 @@ make-burrito () {
 hologram-base () {
   # Requires one argument - the path to the file.
   # hologram-base stylesheets/core/_base.scss
+  echo '' >> $1
+  echo '' >> $1
+  echo '// - - - - - - - - - - - - - - - - - - -' >> $1
+  echo '// - - documentation' >> $1
+  echo '// hologram documentation for base styles' >> $1
+  echo '' >> $1
   echo '/*doc' >> $1
   echo '---' >> $1
   echo 'title: typography' >> $1
