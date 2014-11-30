@@ -24,7 +24,7 @@ To use this feature navigate to the modules folder and run:
 burrito example-module
 ```
 
-This will create a file with some default comments, in this case named ```_example-module.scss``` and import it into the main ```_modules.scss``` file for you.
+This will create a new module file, in this case named ```_example-module.scss``` and import it into the main ```_modules.scss``` file for you.
 
 #### Want some comments?
 
@@ -50,25 +50,25 @@ Ok, now that you're familiar with those concepts, are you hungry for some burrit
 ###What's in this burrito?
 
 css-burrito has four main ingredients.
-####**1.  Application.scss**
-* This file imports all of the other files from the **Libs**, **Core** and **Module** sections.
-* It has an **Inbox** section where developers that don't usually work on the project can leave temporary code that is easily seen by the maintainers of the project.
-* It also has a **Shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later.
+####**1.  application.scss**
+* This file imports all of the other files from the **libs**, **core** and **module** sections.
+* It has an **inbox** section where developers that don't usually work on the project can leave temporary code that is easily seen by the maintainers of the project.
+* It also has a **shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later.
 
-#### **2.  Libs**
+#### **2.  libs**
 * This section houses third party CSS libraries like [Normalize](http://necolas.github.io/normalize.css/), [Bootstrap](http://getbootstrap.com/), or [Foundation](http://foundation.zurb.com/).
 * It also contains a ```_library-variable-overrides.scss``` file for overriding third party variables.
 * Normalize v3.0.2 is included in the libs folder by default.
 
-#### **3.  Core** -  There are six core components.
-* **Settings** - @font-face and global variables
-* **Utilities** - Placeholders, Extends, Mixins, Functions, etc.
-* **Base** - Global defaults for base-level tags (body, p, etc.)
-* **Layout** - Global layout classes (margin, padding, floats, etc).
-* **Skin** - Global skin classes (gradients, colors, box-shadows, etc).
-* **Typography** - Global typography classes.
+#### **3.  core** -  There are six core components.
+* **settings** - @font-face and global variables
+* **utilities** - placeholders, extends, mixins, functions, etc.
+* **base** - global defaults for base-level tags (body, p, etc.)
+* **layout** - global layout classes (margin, padding, floats, etc).
+* **skin** - global skin classes (gradients, colors, box-shadows, etc).
+* **typography** - global typography classes.
 
-####**4.  Modules**
+####**4.  modules**
 * Any unit of style that can be found across multiple pages (Buttons, Navigations, Modals).
 * **Most of your styles should be found here.**
 
@@ -114,13 +114,13 @@ Using the above component pattern can be painful to type over and over.  Let css
 In the command line, run the following:
 
 ```
-burrito-c example component
+burrito -c example component
 ```
 
-```burrito-c``` creates a new snippet, and copies it to your clipboard.
+This creates a new snippet, and copies it to your clipboard.
 The first argument should be the module name, and the second should be descriptive information about the component.
 
-If the output in the command line looks correct, just switch over to your text editor and hit paste.  This code should be pasted into the appropriate modules "Components" section.
+If the output in the command line looks correct, just switch over to your text editor and hit paste.
 
 ##Suggested Styleguide
 
