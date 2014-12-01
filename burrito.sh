@@ -44,7 +44,7 @@ ascii-oops () {
 }
 
 success-message () {
-  echo '  Mmmmmmm! you have created the following files,'
+  echo '  Mmmmmmm, you have created the following files,'
   echo '  and they have been imported into the _modules.scss file.'
 }
 
@@ -90,6 +90,7 @@ error-message-modules () {
 import-modules () {
   echo '// - - - - - - - - - - - - - - - - - - -' > _modules.scss
   echo '// - - modules' > _modules.scss
+  echo '// add new modules here'
   echo '' > _modules.scss
 
   for file in *.scss
@@ -259,6 +260,7 @@ check-options () {
           echo '// - - - - - - - - - - - - - - - - - - -' >> _$i.scss
           echo '// - - '$i 'module'                       >> _$i.scss
           echo '// styles for the' $i 'module'            >> _$i.scss
+          echo ''                                         >> _$i.scss
           echo '// - - - - - - - - - - - - - - - - - - -' >> _$i.scss
           echo ''                                         >> _$i.scss
           echo '// - - layout'                            >> _$i.scss
@@ -376,7 +378,7 @@ check-options () {
         make-burrito
         ascii-burrito
         echo ''
-        echo '  Mmmmmmm! you have successfully added css-burrito to your project'
+        echo '  Mmmmmmm, you have successfully added css-burrito to your project'
       ;;
       [hH])
         make-burrito
@@ -414,24 +416,24 @@ check-options () {
           exit 1
         fi
 
-        echo '  // - - '$2'-'$3          >> snippet.txt
-        echo '  %'$2'-l-'$3' {'          >> snippet.txt
-        echo ''                          >> snippet.txt
-        echo '  }'                       >> snippet.txt
-        echo ''                          >> snippet.txt
-        echo '  %'$2'-s-'$3' {'          >> snippet.txt
-        echo ''                          >> snippet.txt
-        echo '  }'                       >> snippet.txt
-        echo ''                          >> snippet.txt
-        echo '  %'$2'-t-'$3' {'          >> snippet.txt
-        echo ''                          >> snippet.txt
-        echo '  }'                       >> snippet.txt
-        echo ''                          >> snippet.txt
-        echo '  .'$2'-c-'$3' {'          >> snippet.txt
-        echo '    @extend %'$2'-l-'$3';' >> snippet.txt
-        echo '    @extend %'$2'-s-'$3';' >> snippet.txt
-        echo '    @extend %'$2'-t-'$3';' >> snippet.txt
-        echo '  }'                       >> snippet.txt
+        echo '// - - '$2'-'$3          >> snippet.txt
+        echo '%'$2'-l-'$3' {'          >> snippet.txt
+        echo ''                        >> snippet.txt
+        echo '}'                       >> snippet.txt
+        echo ''                        >> snippet.txt
+        echo '%'$2'-s-'$3' {'          >> snippet.txt
+        echo ''                        >> snippet.txt
+        echo '}'                       >> snippet.txt
+        echo ''                        >> snippet.txt
+        echo '%'$2'-t-'$3' {'          >> snippet.txt
+        echo ''                        >> snippet.txt
+        echo '}'                       >> snippet.txt
+        echo ''                        >> snippet.txt
+        echo '.'$2'-c-'$3' {'          >> snippet.txt
+        echo '  @extend %'$2'-l-'$3';' >> snippet.txt
+        echo '  @extend %'$2'-s-'$3';' >> snippet.txt
+        echo '  @extend %'$2'-t-'$3';' >> snippet.txt
+        echo '}'                       >> snippet.txt
 
         ascii-burrito
         echo '  this is your snippet:'
