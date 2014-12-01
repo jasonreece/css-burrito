@@ -90,7 +90,7 @@ error-message-modules () {
 import-modules () {
   echo '// - - - - - - - - - - - - - - - - - - -' > _modules.scss
   echo '// - - modules' > _modules.scss
-  echo '// add new modules here'
+  echo '// add new modules here' > _modules.scss
   echo '' > _modules.scss
 
   for file in *.scss
@@ -570,6 +570,10 @@ else
   if [ -z "$1" ]; then
     ascii-oops
     error-message-args
+  fi
+  if [ ! -f _modules.scss ]; then
+    ascii-oops
+    error-message-modules
   fi
   ascii-burrito
   success-message
