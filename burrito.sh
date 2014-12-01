@@ -375,6 +375,8 @@ check-options () {
       [nN])
         make-burrito
         ascii-burrito
+        echo ''
+        echo '  Mmmmmmm! you have successfully added css-burrito to your project'
       ;;
       [hH])
         make-burrito
