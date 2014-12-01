@@ -85,7 +85,7 @@ The Markup:
 
 The Sass:
 
-        // ----- example-component ---- //
+        // - - example-component
 
         %example-l-component {
           // write layout code here...
