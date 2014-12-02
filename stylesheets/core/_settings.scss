@@ -6,22 +6,22 @@
 // - - - - - - - - - - - - - - - - - - -
 // - - @font-face
 // add fonts to project as needed by updating the $fonts map below in the following format -
-// 'font-group-name': 'font-name'
+// 'font-family-name': 'font-weight'
 
 // $fonts: (
-//   'font-group-one': ('font-name-light', 'font-name-dark'),
-//   'font-group-two': ('font-name-light','font-name-medium')
+//   'font-family-one': ('font-one-light', 'font-one-dark'),
+//   'font-family-two': ('font-two-light','font-two-medium')
 // );
 
-// @each $font-group, $font-names in $fonts {
-//   @each $font-name in $font-names {
+// @each $font-family, $font-weights in $fonts {
+//   @each $font-weight in $font-weights {
 //     @font-face {
-//       name: $font-name;
+//       name: $font-weight;
 //       src:
-//         url('/path/to/fonts/#{$font-group}/#{$font-name}.eot?#iefix') format('embedded-opentype'),
-//         url('/path/to/fonts/#{$font-group}/#{$font-name}.woff') format('woff'),
-//         url('/path/to/fonts/#{$font-group}/#{$font-name}.ttf') format('truetype'),
-//         url('/path/to/fonts/#{$font-group}/#{$font-name}.svg##{$font-name}') format('svg');
+//         url('/path/to/fonts/#{$font-family}/#{$font-weight}.eot?#iefix') format('embedded-opentype'),
+//         url('/path/to/fonts/#{$font-family}/#{$font-weight}.woff') format('woff'),
+//         url('/path/to/fonts/#{$font-family}/#{$font-weight}.ttf') format('truetype'),
+//         url('/path/to/fonts/#{$font-family}/#{$font-weight}.svg##{$font-weight}') format('svg');
 //     }
 //   }
 // }
