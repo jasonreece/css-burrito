@@ -262,7 +262,6 @@ check-options () {
           echo '// styles for the' $i 'module'            >> _$i.scss
           echo ''                                         >> _$i.scss
           echo '// - - - - - - - - - - - - - - - - - - -' >> _$i.scss
-          echo ''                                         >> _$i.scss
           echo '// - - layout'                            >> _$i.scss
           echo ''                                         >> _$i.scss
           echo '//  lllllllllll'                          >> _$i.scss
@@ -438,7 +437,24 @@ check-options () {
         ascii-burrito
         echo '  this is your snippet:'
         echo ''
-        cat snippet.txt
+        echo '  // - - '$2'-'$3
+        echo '  %'$2'-l-'$3' {'
+        echo ''
+        echo '  }'
+        echo ''
+        echo '  %'$2'-s-'$3' {'
+        echo ''
+        echo '  }'
+        echo ''
+        echo '  %'$2'-t-'$3' {'
+        echo '  '
+        echo '  }'
+        echo ''
+        echo '  .'$2'-c-'$3' {'
+        echo '    @extend %'$2'-l-'$3';'
+        echo '    @extend %'$2'-s-'$3';'
+        echo '    @extend %'$2'-t-'$3';'
+        echo '  }'
         echo ''
         echo '  if this looks tasty, switch to your editor, and hit paste.'
         echo ''
