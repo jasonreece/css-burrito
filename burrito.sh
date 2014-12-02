@@ -88,10 +88,10 @@ error-message-modules () {
 }
 
 import-modules () {
-  echo '// - - - - - - - - - - - - - - - - - - -' > _modules.scss
-  echo '// - - modules' > _modules.scss
-  echo '// add new modules here' > _modules.scss
-  echo '' > _modules.scss
+  echo '// - - - - - - - - - - - - - - - - - - -' >> _modules.scss
+  echo '// - - modules' >> _modules.scss
+  echo '// add new modules here' >> _modules.scss
+  echo '' >> _modules.scss
 
   for file in *.scss
   do
