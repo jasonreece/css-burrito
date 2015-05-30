@@ -2,45 +2,12 @@
 // - - utilities
 // placeholders extends, mixins, functions, and utility classes
 
-
 // - - - - - - - - - - - - - - - - - - -
 // - - placeholder extends
 
-// - - clearfix
-// %clearfix:before,
-// %clearfix:after {
-//   content: " ";
-//   display: table;
-// }
-
-// %clearfix:after {
-//   clear: both;
-// }
-
-// %clearfix {
-//   *zoom: 1;
-// }
 
 // - - - - - - - - - - - - - - - - - - -
 // - - mixins
-
-// - - breakpoint
-// adds responsive breakpoints.
-// @mixin breakpoint($width) {
-//   @media (min-width: $width) {
-//     @content;
-//   }
-// }
-
-// - - attention
-// adds accessibility pseudo selectors to hover states.
-// @mixin attention() {
-//   &:hover,
-//   &:active,
-//   &:focus {
-//     @content;
-//   }
-// }
 
 
 // - - - - - - - - - - - - - - - - - - -
@@ -48,4 +15,4 @@
 
 
 // - - - - - - - - - - - - - - - - - - -
-// - - utilities
+// - - utility classes
