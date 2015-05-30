@@ -26,10 +26,6 @@ burrito example-module
 
 This will create a new module file, in this case named ```_example-module.scss``` and import it into the main ```_modules.scss``` file for you.
 
-#### Want some comments?
-
-Just pass in ```-s```, ```-m```, or ```-l```, in like so: ```burrito -s example-module```, ```burrito -m example-module```, or ```burrito -l example-module``` to get small, medium, or large ascii comments.  These work great with the minimap in Sublime Text 2 or Atom to quickly move around in the module.
-
 ### Why css-burrito?
 
 To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:
@@ -74,53 +70,6 @@ css-burrito has four main ingredients.
 
 ###Wrapping it all together.
 This template should feel intuitive and easy to use.  The goal is to keep everything organized so that large projects will scale nicely without duplicating code, or having unnecessary increases in specificity.
-
-#### Components
-
-To avoid littering your markup with classes, and to promote code reuse, css-burrito uses the following pattern whenever possible.
-
-The Markup:
-
-        <div class="example-c-component">
-
-The Sass:
-
-        // - - example-component
-
-        %example-l-component {
-          // write layout code here...
-        }
-
-        %example-s-component {
-          // write skin code here...
-        }
-
-        %example-t-component {
-          // write typography code here...
-        }
-
-        .example-c-component {
-          @extend %example-l-component;
-          @extend %example-s-component;
-          @extend %example-t-component;
-          // add and remove placeholders as needed...
-        }
-
-This pattern allows you to easily separate layout, skin, and typography within a given module.
-
-#### Adding New Components
-Using the above component pattern can be painful to type over and over.  Let css-burrito help!
-
-In the command line, run the following:
-
-```
-burrito -c example component
-```
-
-This creates a new snippet, and copies it to your clipboard.
-The first argument should be the module name, and the second should be descriptive information about the component.
-
-If the output in the command line looks correct, just switch over to your text editor and hit paste.
 
 ##Suggested Styleguide
 
