@@ -2,7 +2,7 @@
 
 // - - - - - - - - - - - - - - - - - - -
 // - - application.scss
-// contains an import section for libs, core, and modules, the inbox,
+// contains an import section for libs, global, and modules, the inbox,
 // and a shame section for quick fixes and hacks.
 
 
@@ -20,31 +20,31 @@
 
 
 // - - - - - - - - - - - - - - - - - - -
-// - - core
+// - - global
 
-// - - core/settings
+// - - global/settings
 // @font-face declarations, variables
-@import "core/settings";
+@import "global/settings";
 
-// - - core/utilities
+// - - global/utilities
 // extends, functions, and mixins
-@import "core/utilities";
+@import "global/utilities";
 
-// - - core/base
+// - - global/base
 // base-level tags (body, p, etc.)
-@import "core/base";
+@import "global/base";
 
-// - - core/layout
+// - - global/layout
 // margin, padding, sizing
-@import "core/layout";
+@import "global/layout";
 
-// - - core/skin
+// - - global/skin
 // backgrounds, borders, box-shadow, etc
-@import "core/skin";
+@import "global/skin";
 
-// - - core/typography
+// - - global/typography
 // fonts and colors
-@import "core/typography";
+@import "global/typography";
 
 
 // - - - - - - - - - - - - - - - - - - -
