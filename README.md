@@ -31,7 +31,7 @@ You can create multiple files at once.
 
 css-burrito has four main ingredients.
 ####**1.  application.scss**
-* This file imports all of the other files from the **libs**, **core** and **module** sections.
+* This file imports all of the other files from the **libs**, **global** and **module** sections.
 * It has an **inbox** section where developers that don't usually work on the project can leave temporary code that is easily seen by the maintainers of the project.
 * It also has a **shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later.
 
@@ -40,7 +40,7 @@ css-burrito has four main ingredients.
 * It also contains a ```_library-variable-overrides.scss``` file for overriding third party variables.
 * Normalize v3.0.2 is included in the libs folder by default.
 
-#### **3.  core** -  There are six core components.
+#### **3.  global** -  There are six global components.
 * **settings** - @font-face and global variables
 * **utilities** - placeholders, extends, mixins, functions, etc.
 * **base** - global defaults for base-level tags (body, p, etc.)
