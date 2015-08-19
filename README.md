@@ -1,5 +1,5 @@
 #**css-burrito**
-##**An organizational Sass template**
+##**A SMACSS based Sass template with superpowers**
 
 ### Quick Install
 
@@ -12,7 +12,7 @@ npm install -g css-burrito
 In the command line, navigate to the folder that you want to install the project, and run:
 
 ```
-burrito -n
+burrito -n [folder-name]
 ```
 
 ### Adding New Modules
@@ -21,27 +21,11 @@ css-burrito will add new modules for you!
 To use this feature navigate to the modules folder and run:
 
 ```
-burrito example-module
+burrito -m (file-name[s])
 ```
 
-This will create a new module file, in this case named ```_example-module.scss``` and import it into the main ```_modules.scss``` file for you.
-
-### Why css-burrito?
-
-To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:
-
-####[OOCSS](http://oocss.org/) - Object Oriented CSS
-
-* **Separate structure and skin** - Structure properties like padding and margin should be separated from skin properties like background and border.
-* **Separate content from container** - Content modules like buttons and lists should not be dependent on their parent containers.
-
-####[SMACSS](http://smacss.com/) - Scalable and Modular Architecture for CSS
-
-* Increase the semantic value of HTML and content.
-* Decrease the expectation of a specific HTML structure.
-* Organize your css files into sections like **base rules**, **layout rules**, and **modules** so that the styling will be flexible and easily maintainable.
-
-Ok, now that you're familiar with those concepts, are you hungry for some burrito?
+This will create a new module partial, and import it into the main ```_modules.scss``` file for you.
+You can create multiple files at once.
 
 ###What's in this burrito?
 
