@@ -26,7 +26,7 @@ module.exports = {
 
     // set a default folder name if one didn't get passed in
     if (folderName === undefined) {
-      folderName = 'styles';
+      folderName = 'stylesheets';
     }
 
     // write the css-burrito-config.json file
