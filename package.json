@@ -1,14 +1,14 @@
 {
   "name": "css-burrito",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "description": "An organizational Sass template",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "preferGlobal": "true",
-  "bin":  {
-    "burrito": "./burrito.sh"
+  "bin": {
+    "burrito": "./js/index.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,11 @@
       "url": "https://github.com/jasonreece/css-burrito/blob/master/LICENSE.md"
     }
   ],
+  "dependencies": {
+    "chalk": "^1.1.0",
+    "ncp": "^2.0.0",
+    "node-getopt": "^0.2.3"
+  },
   "keywords": [
     "sass",
     "scss",
