@@ -42,32 +42,7 @@ To use this feature run:
 burrito -l
 ```
 
-### What's in the burrito template?
-
-css-burrito has four main ingredients.
-#### **1.  application.scss**
-* This file imports all of the other files from the **libs**, **global** and **module** sections.
-* It has an **inbox** section where developers that don't usually work on the project can leave temporary code that is easily seen by the maintainers of the project.
-* It also has a **shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later.
-
-#### **2.  libs**
-* This section houses third party CSS libraries like [Normalize](http://necolas.github.io/normalize.css/), [Bootstrap](http://getbootstrap.com/), or [Foundation](http://foundation.zurb.com/).
-* It also contains a ```_library-variable-overrides.scss``` file for overriding third party variables.
-* Normalize v3.0.2 is included in the libs folder by default.
-
-#### **3.  global** -  There are six global components.
-* **settings** - @font-face and global variables
-* **utilities** - placeholders, extends, mixins, functions, etc.
-* **base** - global defaults for base-level tags (body, p, etc.)
-* **layout** - global layout classes (margin, padding, floats, etc).
-* **skin** - global skin classes (gradients, colors, box-shadows, etc).
-* **typography** - global typography classes.
-
-#### **4.  modules**
-* Any unit of style that can be found across multiple pages (Buttons, Navigations, Modals).
-* **Most of your styles should be found here.**
-
-### Want to use your own template instead of our??
+### Want to use your own template instead of ours?
 
 You can, and you'll still get all the superpowers!  You'll just need to edit the template directories and files in the ``` css-burrito-config.json ``` file.
 
@@ -117,15 +92,38 @@ Becomes this:
 }
 ```
 
-Then run:
+Then generate the new project:
 
 ```
 burrito -g
 ```
 
-### Need Help?
+### What's in our burrito template?
 
-Run:
+css-burrito has four main ingredients.
+#### **1.  application.scss**
+* This file imports all of the other files from the **libs**, **global** and **module** sections.
+* It has an **inbox** section where developers that don't usually work on the project can leave temporary code that is easily seen by the maintainers of the project.
+* It also has a **shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later.
+
+#### **2.  libs**
+* This section houses third party CSS libraries like [Normalize](http://necolas.github.io/normalize.css/), [Bootstrap](http://getbootstrap.com/), or [Foundation](http://foundation.zurb.com/).
+* It also contains a ```_library-variable-overrides.scss``` file for overriding third party variables.
+* Normalize v3.0.2 is included in the libs folder by default.
+
+#### **3.  global** -  There are six global components.
+* **settings** - @font-face and global variables
+* **utilities** - placeholders, extends, mixins, functions, etc.
+* **base** - global defaults for base-level tags (body, p, etc.)
+* **layout** - global layout classes (margin, padding, floats, etc).
+* **skin** - global skin classes (gradients, colors, box-shadows, etc).
+* **typography** - global typography classes.
+
+#### **4.  modules**
+* Any unit of style that can be found across multiple pages (Buttons, Navigations, Modals).
+* **Most of your styles should be found here.**
+
+### Need Help?
 
 ```
 burrito -h
