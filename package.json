@@ -1,6 +1,6 @@
 {
   "name": "css-burrito",
-  "version": "1.5.7",
+  "version": "1.5.8",
   "description": "An organizational Sass template",
   "main": "index.js",
   "scripts": {
@@ -23,8 +23,8 @@
   ],
   "dependencies": {
     "chalk": "^1.1.0",
-    "ncp": "^2.0.0",
-    "node-getopt": "^0.2.3"
+    "node-getopt": "^0.2.3",
+    "wrench": "^1.5.8"
   },
   "keywords": [
     "sass",
