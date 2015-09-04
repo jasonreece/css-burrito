@@ -2,32 +2,50 @@
 
 var Getopt = require('node-getopt');
 
-var createNewBurrito = require('./libs/create-new-burrito.js');
-var createNewModules = require('./libs/create-new-modules.js');
+var init = require('./libs/init.js');
+var modules = require('./libs/modules.js');
 var messages = require('./libs/messages.js');
 
 var getopt = new Getopt([
+  ['g', 'generate'],
   ['h', 'help'],
   ['m', 'module'],
-  ['n', 'new']
+  ['n', 'new'],
+  ['r', 'remove'],
+  ['l', 'list']
 ]);
 
-// getopt, lets shut down your error messages, messages.helpMessage() will take care of that
-getopt.error( function() {
+// getopt, lets shut down your error messages, messages.helpMessage() will take care of this for you
+getopt.error(function() {
   return;
 });
 
-// parseSystem strips out the first two arguments: ['node', path/to/file]
+// strip out the first two arguments: ['node', path/to/file]
 var opt = getopt.parseSystem();
 
 if ( opt.options.n || opt.options.new ) {
-  // create a new instance of burrito
-  createNewBurrito.init(opt.argv);
+  // create a new instance of the burrito template
+  init.generateDefault(opt.argv);
+}
+
+else if ( opt.options.g || opt.options.generate ) {
+  // generate a custom template based off of the config file
+  init.generateTemplate(opt.argv);
 }
 
 else if ( opt.options.m || opt.options.module ) {
-  // create new file(s) and @import them into the _modules file.
-  createNewModules.init(opt.argv);
+  // add new file(s) to the modulesDirectory and the modulesImportFile
+  modules.create(opt.argv);
+}
+
+else if ( opt.options.r || opt.options.remove ) {
+  // remove file(s) from the modulesDirectory and the modulesImportFile
+  modules.remove(opt.argv);
+}
+
+else if ( opt.options.l || opt.options.list ) {
+  // list the file[s] in modules directory
+  modules.list(opt.argv);
 }
 
 else {
