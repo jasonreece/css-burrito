@@ -11,7 +11,7 @@ var configFile = './css-burrito-config.json';
 module.exports = {
   generateDefault: function(options){
     // setting defaults
-    var sassDirectory = options[0] || 'styles';
+    var sassDirectory = options[0] || 'stylesheets';
     var sassImportFile = options[1] || 'application.scss';
     var pathToSassDirectory = options[2] || './';
     var modulesDirectory = 'modules';
