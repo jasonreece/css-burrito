@@ -1,5 +1,5 @@
-#**css-burrito**
-##**A SMACSS based Sass template with superpowers**
+# **css-burrito**
+## **A SMACSS based Sass template with superpowers**
 
 ### Quick Install
 
@@ -16,21 +16,36 @@ burrito -n [folder-name]
 ```
 
 ### Adding New Modules
-css-burrito will add new modules for you!
+css-burrito will add new modules files, and @import them into the project for you!
 
-To use this feature navigate to the modules folder and run:
+To use this feature run:
 
 ```
 burrito -m (file-name[s])
 ```
 
-This will create a new module partial, and import it into the main ```_modules.scss``` file for you.
-You can create multiple files at once.
+### Remove Modules
+css-burrito will also delete unnecessary modules files, and remove the @import from the project for you!
 
-###What's in this burrito?
+To use this feature run:
+
+```
+burrito -r (file-name[s])
+```
+
+### List the Files in the Modules Directory
+css-burrito will list your module files for you.
+
+To use this feature run:
+
+```
+burrito -l
+```
+
+### What's in the burrito template?
 
 css-burrito has four main ingredients.
-####**1.  application.scss**
+#### **1.  application.scss**
 * This file imports all of the other files from the **libs**, **global** and **module** sections.
 * It has an **inbox** section where developers that don't usually work on the project can leave temporary code that is easily seen by the maintainers of the project.
 * It also has a **shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later.
@@ -48,28 +63,70 @@ css-burrito has four main ingredients.
 * **skin** - global skin classes (gradients, colors, box-shadows, etc).
 * **typography** - global typography classes.
 
-####**4.  modules**
+#### **4.  modules**
 * Any unit of style that can be found across multiple pages (Buttons, Navigations, Modals).
 * **Most of your styles should be found here.**
 
-###Wrapping it all together.
-This template should feel intuitive and easy to use.  The goal is to keep everything organized so that large projects will scale nicely without duplicating code, or having unnecessary increases in specificity.
+### Want to use your own template instead of our??
 
-##Suggested Styleguide
+You can, and you'll still get all the superpowers!  You'll just need to edit the template directories and files in the ``` css-burrito-config.json ``` file.
 
-####General Styling
-* Avoid using ID's.  Use classes instead.
-* All CSS class names should use dashes instead of underscores or camel case.
-* All CSS class names should begin with a prefix describing the filename where the styles will be written.
-* For example:
-    * A layout class name should be written as: ```l-example-classname```
-    * A typography class name should be written as: ```t-example-classname```
-    * A module class name should be written as: ```modulename-example-classname```
-    * Utility class names should be written as: ```u-example-classname```
-* Do not over-qualify selectors.  Keep specificity as low as possible.
-* Use one discrete, comma separated selector per line in multi-selector rulesets.
+So this:
+```
+...
+"template": {
+  "directories": [
+    "global",
+    "libs"
+  ],
+  "files": [
+    "libs/_library-variable-overrides.scss",
+    "libs/_normalize.scss",
+    "global/_settings.scss",
+    "global/_utilities.scss",
+    "global/_base.scss",
+    "global/_layout.scss",
+    "global/_skin.scss",
+    "global/_typography.scss"
+  ]
+}
+```
 
-####Preprocessors
-* Do not nest deeper than 3 levels (with the exception of pseudo/hover states).
-* Declare ```@extend``` followed by ```@include``` statements first in a declaration block whenever possible.
-* If a ```:hover``` pseudo class is styled, ```:focus``` should also be styled for accessibility. Focus styles should never be removed.
+Becomes this:
+```
+...
+"template": {
+  "directories": [
+    "global",
+    "libs",
+    "new-directory",
+    "new-directory/nested"
+  ],
+  "files": [
+    "new-directory/_new-file.scss",
+    "new-directory/nested/_new-nested-file.scss",
+    "libs/_library-variable-overrides.scss",
+    "libs/_normalize.scss",
+    "global/_settings.scss",
+    "global/_utilities.scss",
+    "global/_base.scss",
+    "global/_layout.scss",
+    "global/_skin.scss",
+    "global/_typography.scss"
+  ]
+}
+```
+
+Then run:
+
+```
+burrito -g
+```
+
+### Need Help?
+
+Run:
+
+```
+burrito -h
+```
