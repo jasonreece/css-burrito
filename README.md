@@ -11,7 +11,7 @@ npm install -g css-burrito
 
 In the command line, navigate to the folder that you want to install the project.
 
-You can provide a custom name for the **sass directory**, a custom name for the **main sass import file**, and any **parent directories** (for example, an assets directory).
+It isn't required, but you can provide a custom name for the **sass directory**, a custom name for the **main sass import file**, and any **parent directories** (for example, an assets directory).
 
 This will generate a ```css-burrito-config.json``` file, that can later be edited to further customize the template.
 
