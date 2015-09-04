@@ -21,7 +21,7 @@ module.exports = {
 
     // loop over the module files
     fileNames.forEach(function(file) {
-      text += '@import ' + sanitize(file) + ';\n';
+      text += '@import "' + sanitize(file) + '";\n';
     });
 
     return text;
