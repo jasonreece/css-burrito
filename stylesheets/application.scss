@@ -1,3 +1,5 @@
+@charset 'utf-8';
+
 // - - css-burrito v1.5 | mit license | github.com/jasonreece/css-burrito
 
 // - - - - - - - - - - - - - - - - - - -
@@ -13,10 +15,10 @@
 // if you want to change variable values.
 
 // - - variable overrides for sass libraries
-// @import "libs/library-variable-overrides";
+// @import 'libs/library-variable-overrides';
 
 // - - reset - normalize.css v3.0.2
-// @import "libs/normalize";
+// @import 'libs/normalize';
 
 
 // - - - - - - - - - - - - - - - - - - -
@@ -24,33 +26,33 @@
 
 // - - global/settings
 // @font-face declarations, variables
-@import "global/settings";
+@import 'global/settings';
 
 // - - global/utilities
 // extends, functions, and mixins
-@import "global/utilities";
+@import 'global/utilities';
 
 // - - global/base
 // base-level tags (body, p, etc.)
-@import "global/base";
+@import 'global/base';
 
 // - - global/layout
 // margin, padding, sizing
-@import "global/layout";
+@import 'global/layout';
 
 // - - global/skin
 // backgrounds, borders, box-shadow, etc
-@import "global/skin";
+@import 'global/skin';
 
 // - - global/typography
 // fonts and colors
-@import "global/typography";
+@import 'global/typography';
 
 
 // - - - - - - - - - - - - - - - - - - -
 // - - modules
 // add new modules to the modules/_modules.scss file and they'll get pulled in here.
-@import "modules/modules";
+@import 'modules/modules';
 
 
 // - - - - - - - - - - - - - - - - - - -
