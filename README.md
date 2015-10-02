@@ -116,12 +116,12 @@ css-burrito has four main ingredients.
 * Normalize v3.0.2 is included in the libs folder by default.
 
 #### **3.  global** -  There are six global components.
-* **settings** - @font-face and global variables
-* **utilities** - placeholders, extends, mixins, functions, etc.
-* **base** - global defaults for base-level tags (body, p, etc.)
-* **layout** - global layout classes (margin, padding, floats, etc).
-* **skin** - global skin classes (gradients, colors, box-shadows, etc).
-* **typography** - global typography classes.
+* _settings_ - global maps and variables
+* _utilities_ - extends, mixins, functions, and utilities.
+* _base_ - global defaults for base-level tags (body, p, etc.)
+* _layout_ - global layout classes (margin, padding, floats, etc).
+* _skin_ - global skin classes (gradients, colors, box-shadows, etc).
+* _typography_ - global typography classes.
 
 #### **4.  modules**
 * Any unit of style that can be found across multiple pages (Buttons, Navigations, Modals).
