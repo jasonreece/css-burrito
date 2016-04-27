@@ -7,19 +7,13 @@
 // contains an import section for libs, global, and modules, the inbox,
 // and a shame section for quick fixes and hacks.
 
+// - - variable overrides for 3rd party libraries
+@import 'libs/library-variable-overrides';
 
 // - - - - - - - - - - - - - - - - - - -
 // - - libs
-// add css frameworks and libraries here.
+// add 3rd party libraries here.
 // be sure to load them after the variable overrides file
-// if you want to change variable values.
-
-// - - variable overrides for sass libraries
-// @import 'libs/library-variable-overrides';
-
-// - - reset - normalize.css v3.0.2
-// @import 'libs/normalize';
-
 
 // - - - - - - - - - - - - - - - - - - -
 // - - global
@@ -48,18 +42,15 @@
 // fonts and colors
 @import 'global/typography';
 
-
 // - - - - - - - - - - - - - - - - - - -
 // - - modules
 // add new modules to the modules/_modules.scss file and they'll get pulled in here.
 @import 'modules/modules';
 
-
 // - - - - - - - - - - - - - - - - - - -
 // - - inbox
 // the inbox allows developers, and those not actively working on the project
 // to quickly add styles that are easily seen by the maintainer of the file.
-
 
 // - - - - - - - - - - - - - - - - - - -
 // - - shame
