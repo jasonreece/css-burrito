@@ -17,7 +17,7 @@ module.exports = {
     // add comments
     var text = "// - - - - - - - - - - - - - - - - - - -\n";
     text += "// - - modules\n";
-    text += "// add new modules here\n\n";
+    text += "// import new modules here\n\n";
 
     // loop over the module files
     fileNames.forEach(function(file) {
