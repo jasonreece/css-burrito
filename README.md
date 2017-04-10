@@ -94,6 +94,12 @@ To use this feature run:
 burrito -l
 ```
 
+## Need Help?
+It's always there for you.
+```
+burrito -h
+```
+
 ## What's in our burrito template?
 
 css-burrito has four main ingredients.
@@ -117,9 +123,3 @@ css-burrito has four main ingredients.
 ### **4.  modules**
 * Any unit of style that can be found across multiple pages (Buttons, Navigations, Modals).
 * **Most of your styles should be found here.**
-
-### Need Help?
-
-```
-burrito -h
-```
