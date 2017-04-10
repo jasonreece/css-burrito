@@ -3,12 +3,12 @@
 // - - css-burrito v1.6 | mit license | github.com/jasonreece/css-burrito
 
 // - - - - - - - - - - - - - - - - - - -
-// - - application.scss
+// - - index.scss
 // contains an import section for libs, global, and modules, the inbox,
 // and a shame section for quick fixes and hacks.
 
 // - - variable overrides for 3rd party libraries
-@import 'libs/library-variable-overrides';
+@import 'libs/libs-variable-overrides';
 
 // - - - - - - - - - - - - - - - - - - -
 // - - libs

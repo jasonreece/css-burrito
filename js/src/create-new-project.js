@@ -15,5 +15,5 @@ export default function addNewProject() {
 
   newProjectSuccessMessage();
   fse.ensureDirSync(config.data.pathToStyles);
-  fse.copySync(path.join(__dirname, '..', '..', '/stylesheets/'), path.join(config.data.pathToStyles, config.data.stylesDirectoryName));
+  fse.copySync(path.join(__dirname, '..', '..', '/styles/'), path.join(config.data.pathToStyles, config.data.stylesDirectoryName));
 }

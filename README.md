@@ -4,7 +4,7 @@ An architectural Sass template that will:
 * remove modules that are no longer needed and un-@import them.
 * list all modules files, just in case you need a quick peek..
 
-### Quick Install
+## Quick Install
 
 Clone the Repo or install with npm.
 
@@ -12,7 +12,7 @@ Clone the Repo or install with npm.
 npm install -g css-burrito
 ```
 
-### Add the template to your project.
+## Add the template to your project.
 
 In the command line, navigate to the root of your project and run:
 
@@ -25,8 +25,8 @@ This creates a new instance of css-burrito in the root of your project.
 The file structure looks like this:
 
 ```
-stylesheets/
-	application.scss
+styles/
+	index.scss
 	global/
     	_base.scss
         _layout.scss
@@ -35,7 +35,7 @@ stylesheets/
         _typography.scss
         _utilities.scss
     libs/
-    	_library-variable-overrides.scss
+    	_libs-variable-overrides.scss
     modules/
     	_modules.scss
 ```
@@ -67,7 +67,7 @@ or
 ```
 
 
-### Adding New Modules
+## Adding New Modules
 css-burrito will add new modules files, and @import them into the project for you!
 
 To use this feature run:
@@ -76,7 +76,7 @@ To use this feature run:
 burrito -m (file-name[s])
 ```
 
-### Removing Modules
+## Removing Modules
 css-burrito will also delete unnecessary modules files, and remove the @import from the project for you!
 
 To use this feature run:
@@ -85,7 +85,7 @@ To use this feature run:
 burrito -r (file-name[s])
 ```
 
-### List the Files in the Modules Directory
+## List the Files in the Modules Directory
 css-burrito will list your module files for you.
 
 To use this feature run:
@@ -94,19 +94,19 @@ To use this feature run:
 burrito -l
 ```
 
-### What's in our burrito template?
+## What's in our burrito template?
 
 css-burrito has four main ingredients.
-#### **1.  application.scss**
+### **1.  index.scss**
 * This file imports all of the other files from the **libs**, **global** and **module** sections.
 * It has an **inbox** section where developers that don't usually work on the project can leave temporary code that is easily seen by the maintainers of the project.
 * It also has a **shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later.
 
-#### **2.  libs**
+### **2.  libs**
 * This section houses third party CSS libraries like [Normalize](http://necolas.github.io/normalize.css/), [Bootstrap](http://getbootstrap.com/), or [Foundation](http://foundation.zurb.com/).
-* It also contains a ```_library-variable-overrides.scss``` file for overriding third party variables.
+* It also contains a ```_libs-variable-overrides.scss``` file for overriding third party variables.
 
-#### **3.  global** -  There are six global components.
+### **3.  global** -  There are six global components.
 * `_settings.scss` - global maps and variables
 * `_utilities.scss` - extends, mixins, functions, and utilities.
 * `_base.scss` - global defaults for base-level tags (body, p, etc.)
@@ -114,7 +114,7 @@ css-burrito has four main ingredients.
 * `_skin.scss` - global skin classes (gradients, colors, box-shadows, etc).
 * `_typography.scss` - global typography classes.
 
-#### **4.  modules**
+### **4.  modules**
 * Any unit of style that can be found across multiple pages (Buttons, Navigations, Modals).
 * **Most of your styles should be found here.**
 

@@ -7,8 +7,8 @@ var CONFIG_TYPES = exports.CONFIG_TYPES = ['.cssburritorc', '.cssburritorc.json'
 
 var CONFIG_DEFAULTS = exports.CONFIG_DEFAULTS = {
   pathToStyles: '',
-  stylesDirectoryName: 'stylesheets',
-  stylesFileName: 'application.scss',
+  stylesDirectoryName: 'styles',
+  stylesFileName: 'index.scss',
   modulesDirectoryName: 'modules',
   modulesImportFileName: '_modules.scss'
 };

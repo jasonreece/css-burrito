@@ -30,5 +30,5 @@ function addNewProject() {
 
   (0, _messages.newProjectSuccessMessage)();
   _fsExtra2.default.ensureDirSync(_config2.default.data.pathToStyles);
-  _fsExtra2.default.copySync(_path2.default.join(__dirname, '..', '..', '/stylesheets/'), _path2.default.join(_config2.default.data.pathToStyles, _config2.default.data.stylesDirectoryName));
+  _fsExtra2.default.copySync(_path2.default.join(__dirname, '..', '..', '/styles/'), _path2.default.join(_config2.default.data.pathToStyles, _config2.default.data.stylesDirectoryName));
 }
