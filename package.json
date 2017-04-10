@@ -1,14 +1,18 @@
 {
   "name": "css-burrito",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "description": "An organizational Sass template",
-  "main": "index.js",
+  "main": "js/src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "burrito": "node js/lib/index.js",
+    "start": "nodemon --ignore js/lib --exec npm run --silent build",
+    "build": "npm run --silent build:lint && npm run --silent build:babel",
+    "build:lint": "eslint js/src; exit 0",
+    "build:babel": "babel js/src --out-dir js/lib"
   },
   "preferGlobal": "true",
   "bin": {
-    "burrito": "./js/index.js"
+    "burrito": "./js/lib/index.js"
   },
   "repository": {
     "type": "git",
@@ -21,11 +25,6 @@
       "url": "https://github.com/jasonreece/css-burrito/blob/master/LICENSE.md"
     }
   ],
-  "dependencies": {
-    "chalk": "^1.1.0",
-    "node-getopt": "^0.2.3",
-    "wrench": "^1.5.8"
-  },
   "keywords": [
     "sass",
     "scss",
@@ -38,5 +37,42 @@
   ],
   "bugs": {
     "url": "https://github.com/jasonreece/css-burrito/issues"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "fs-extra": "^2.1.2",
+    "yargs": "^7.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-env": "^1.2.2",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-compat": "^1.0.2",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2 || ^4.0.0",
+    "eslint-plugin-react": "^6.9.0",
+    "nodemon": "^1.11.0"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "plugins": [
+      "compat"
+    ],
+    "rules": {
+      "no-underscore-dangle": 0,
+      "no-console": 0
+    }
+  },
+  "browserslist": [
+    "> 1%"
+  ],
+  "burrito": {
+    "pathToStyles": "wherever/"
   }
 }
