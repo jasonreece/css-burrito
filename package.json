@@ -71,8 +71,5 @@
   },
   "browserslist": [
     "> 1%"
-  ],
-  "burrito": {
-    "pathToStyles": "wherever/"
-  }
+  ]
 }
