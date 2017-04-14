@@ -44,7 +44,7 @@ function removeModuleFile() {
   (0, _messages.removeModuleMessage)(successFiles, errorFiles);
 
   successFiles.forEach(function (fileName) {
-    _fsExtra2.default.unlinkSync(_path2.default.join(_config2.default.moduleDirectoryPath(), '_' + fileName + '.scss'));
+    _fsExtra2.default.unlinkSync(_path2.default.join((0, _config2.default)().moduleDirectoryPath(), '_' + fileName + '.scss'));
   });
 
   (0, _updateModuleImportsFile2.default)();

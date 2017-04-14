@@ -38,5 +38,5 @@ function _updateModuleImportFileText() {
 }
 
 function updateModuleImportFile() {
-  _fsExtra2.default.writeFileSync(_path2.default.join(_config2.default.moduleImportPath()), _updateModuleImportFileText());
+  _fsExtra2.default.writeFileSync(_path2.default.join((0, _config2.default)().moduleImportPath()), _updateModuleImportFileText());
 }

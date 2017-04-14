@@ -37,7 +37,7 @@ function _fileText(fileName) {
 
 function addModuleFile() {
   var files = (0, _compareModuleFiles2.default)();
-  var notEnoughArgs = !Object.keys(files).length;
+  var notEnoughArgs = Object.keys(files).length === 0;
 
   if (notEnoughArgs) {
     (0, _messages.notEnoughArgsErrorMessage)();
@@ -50,7 +50,7 @@ function addModuleFile() {
   (0, _messages.addModuleMessage)(successFiles, errorFiles);
 
   successFiles.forEach(function (fileName) {
-    _fsExtra2.default.writeFileSync(_path2.default.join(_config2.default.moduleDirectoryPath(), '_' + fileName + '.scss'), _fileText(fileName));
+    _fsExtra2.default.writeFileSync(_path2.default.join((0, _config2.default)().moduleDirectoryPath(), '_' + fileName + '.scss'), _fileText(fileName));
   });
 
   (0, _updateModuleImportsFile2.default)();

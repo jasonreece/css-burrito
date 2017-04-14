@@ -3,9 +3,10 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+exports.default = config;
 
 var _fsExtra = require('fs-extra');
 
@@ -46,12 +47,12 @@ var Config = function () {
   }, {
     key: 'moduleDirectoryPath',
     value: function moduleDirectoryPath() {
-      return _path2.default.join(this.data.pathToStyles, this.data.stylesDirectoryName, this.data.modulesDirectoryName);
+      return _path2.default.join(this.data.pathToStyles, this.data.stylesDirectoryName, 'modules');
     }
   }, {
     key: 'moduleImportPath',
     value: function moduleImportPath() {
-      return _path2.default.join(this.data.pathToStyles, this.data.stylesDirectoryName, this.data.modulesDirectoryName, this.data.modulesImportFileName);
+      return _path2.default.join(this.data.pathToStyles, this.data.stylesDirectoryName, 'modules/_modules.scss');
     }
   }]);
 
@@ -73,10 +74,12 @@ function readUserConfig(configFile) {
   return configObj;
 }
 
-var userConfig = _constants.CONFIG_TYPES.reduce(function (userConfigFiles, userConfigFile) {
-  return Object.assign(userConfigFiles, readUserConfig(userConfigFile));
-}, _constants.CONFIG_DEFAULTS);
+function userConfig() {
+  return _constants.CONFIG_TYPES.reduce(function (userConfigFiles, userConfigFile) {
+    return Object.assign(userConfigFiles, readUserConfig(userConfigFile));
+  }, _constants.CONFIG_DEFAULTS);
+}
 
-var config = new Config(userConfig);
-
-exports.default = config;
+function config() {
+  return new Config(userConfig());
+}

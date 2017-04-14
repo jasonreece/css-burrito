@@ -5,9 +5,7 @@ export const CONFIG_TYPES = [
 ];
 
 export const CONFIG_DEFAULTS = {
-  pathToStyles: '',
+  pathToStyles: './',
   stylesDirectoryName: 'styles',
   stylesFileName: 'index.scss',
-  modulesDirectoryName: 'modules',
-  modulesImportFileName: '_modules.scss',
 };

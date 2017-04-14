@@ -6,9 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 var CONFIG_TYPES = exports.CONFIG_TYPES = ['.cssburritorc', '.cssburritorc.json', 'package.json'];
 
 var CONFIG_DEFAULTS = exports.CONFIG_DEFAULTS = {
-  pathToStyles: '',
+  pathToStyles: './',
   stylesDirectoryName: 'styles',
-  stylesFileName: 'index.scss',
-  modulesDirectoryName: 'modules',
-  modulesImportFileName: '_modules.scss'
+  stylesFileName: 'index.scss'
 };

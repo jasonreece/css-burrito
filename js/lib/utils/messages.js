@@ -88,12 +88,12 @@ function helpMessage() {
   console.log('  to add a new instance of css-burrito into your project, run: \n');
   console.log('  ' + _chalk2.default.inverse(' burrito -n [folder name] ') + ' or ' + _chalk2.default.inverse(' burrito --new [folder name] ') + '\n');
   console.log('  to create files in the modules directory,\n');
-  console.log('  and add them to the ' + _chalk2.default.underline(_config2.default.moduleImportPath()) + ' file, run: \n');
+  console.log('  and add them to the ' + _chalk2.default.underline((0, _config2.default)().moduleImportPath()) + ' file, run: \n');
   console.log('  ' + _chalk2.default.inverse(' burrito -m (module name[s]) ') + ' or ' + _chalk2.default.inverse(' burrito --module (folder name[s]) ') + '\n');
   console.log('  to list the files in the module directory, run:\n');
   console.log('  ' + _chalk2.default.inverse(' burrito -l ') + ' or ' + _chalk2.default.inverse(' burrito --list ') + '\n');
   console.log('  to delete files from the modules directory,\n');
-  console.log('  and remove them from the ' + _chalk2.default.underline(_config2.default.moduleImportPath()) + ' file, run: \n');
+  console.log('  and remove them from the ' + _chalk2.default.underline((0, _config2.default)().moduleImportPath()) + ' file, run: \n');
   console.log('  ' + _chalk2.default.inverse(' burrito -r (module name[s]) ') + ' or ' + _chalk2.default.inverse(' burrito --remove (folder name[s]) ') + '\n');
   console.log('  want to override defaults with a ' + _chalk2.default.underline('.cssburritorc') + ' file?\n');
   console.log('  check out the readme:  https://github.com/jasonreece/css-burrito\n');
@@ -103,23 +103,20 @@ function newProjectSuccessMessage() {
   _logoSuccessMessage();
   _alertSuccessMessage();
   console.log('  you have added css-burrito to your project\n');
-  console.log('  your project directory is named ' + _chalk2.default.underline(_config2.default.stylesDirectoryPath()) + '\n');
-  console.log('  your project import file is named ' + _chalk2.default.underline(_config2.default.stylesFilePath()) + '\n');
+  console.log('  you can find the project template here ' + _chalk2.default.underline((0, _config2.default)().stylesDirectoryPath()) + '\n');
   console.log('  css-burrito will also add new modules to the project for you.\n');
   console.log('  just run:\n');
   console.log('  ' + _chalk2.default.inverse(' burrito -m (module name[s]) ') + ' or ' + _chalk2.default.inverse(' burrito --module (folder name[s] ') + '\n');
-  console.log('  the new modules will be added here: ' + _chalk2.default.underline(_config2.default.moduleImportPath()) + '\n');
-  console.log('  want to override defaults with a ' + _chalk2.default.underline('.cssburritorc') + ' file?\n');
-  console.log('  check out the readme:  https://github.com/jasonreece/css-burrito\n');
+  console.log('  the new modules will be added here: ' + _chalk2.default.underline((0, _config2.default)().moduleImportPath()) + '\n');
 }
 
 function newProjectErrorMessage() {
   _logoErrorMessage();
   _alertErrorMessage();
-  console.log('  looks like you already have a project at ' + _chalk2.default.underline(_config2.default.stylesDirectoryPath()) + '\n');
+  console.log('  looks like you already have a project at ' + _chalk2.default.underline((0, _config2.default)().stylesDirectoryPath()) + '\n');
   console.log('  we didn\'t want to overwrite anything, so we just left it alone...\n');
   console.log('  if you need to create another instance of the template,\n');
-  console.log('  please delete ' + _chalk2.default.underline(_config2.default.stylesDirectoryPath()) + ' and try again\n');
+  console.log('  please delete ' + _chalk2.default.underline((0, _config2.default)().stylesDirectoryPath()) + ' and try again\n');
   console.log('  need help? run:\n');
   console.log('  ' + _chalk2.default.inverse(' burrito -h ') + ' or ' + _chalk2.default.inverse(' burrito --help ') + '\n');
 }
@@ -135,9 +132,9 @@ function addModuleMessage(successFiles, errorFiles) {
 
     console.log('');
 
-    _pluralizeMessage(successFiles, '  and it has been imported into the project at:\n', '  and they have been imported into the project at:\n');
+    _pluralizeMessage(successFiles, '  and it has been imported into the project at:', '  and they have been imported into the project at:');
 
-    console.log('  ' + _chalk2.default.underline(_config2.default.moduleImportPath()) + '\n');
+    console.log('  ' + _chalk2.default.underline((0, _config2.default)().moduleImportPath()) + '\n');
   } else {
     _logoErrorMessage();
     _alertErrorMessage();
@@ -159,7 +156,7 @@ function addModuleMessage(successFiles, errorFiles) {
 function removeModuleMessage(successFiles, errorFiles) {
   if (successFiles.length) {
     _logoSuccessMessage();
-    _pluralizeMessage(successFiles, '  you have removed the following file\n', '  you have removed the following files\n');
+    _pluralizeMessage(successFiles, '  you have removed the following file from your project\n', '  you have removed the following files from your project\n');
 
     successFiles.forEach(function (file) {
       return console.log(_chalk2.default.green('  _' + file + '.scss'));
@@ -167,11 +164,9 @@ function removeModuleMessage(successFiles, errorFiles) {
 
     console.log('');
 
-    console.log('  from your project\n');
+    _pluralizeMessage(successFiles, '  and it has also been removed from', '  and they have also been removed from');
 
-    _pluralizeMessage(successFiles, '  and it has also been removed from\n', '  and they have also been removed from\n');
-
-    console.log('  ' + _chalk2.default.underline(_config2.default.moduleImportPath()) + '\n');
+    console.log('  ' + _chalk2.default.underline((0, _config2.default)().moduleImportPath()) + '\n');
   } else {
     _logoErrorMessage();
     _alertErrorMessage();
@@ -200,9 +195,9 @@ function notEnoughArgsErrorMessage() {
 
 function listSuccessMessage(fileNames) {
   _logoSuccessMessage();
-  _pluralizeMessage(fileNames, '  You currently have the following file in your\n', '  You currently have the following file in your\n');
+  _pluralizeMessage(fileNames, '  You currently have the following file in your', '  You currently have the following file in your');
 
-  console.log('  ' + _chalk2.default.underline(_config2.default.moduleDirectoryPath()) + ' directory\n');
+  console.log('  ' + _chalk2.default.underline((0, _config2.default)().moduleDirectoryPath()) + ' directory\n');
 
   fileNames.forEach(function (fileName) {
     return console.log('  ' + _chalk2.default.green(fileName));
@@ -213,7 +208,7 @@ function listSuccessMessage(fileNames) {
 
 function listErrorMessage() {
   _logoErrorMessage();
-  console.log('  looks like the ' + _chalk2.default.underline(_config2.default.moduleDirectoryPath()) + ' directory is currently empty.\n');
+  console.log('  looks like the ' + _chalk2.default.underline((0, _config2.default)().moduleDirectoryPath()) + ' directory is currently empty.\n');
   console.log('  to add some module files, run:\n');
   console.log('  ' + _chalk2.default.inverse(' burrito -m (module name[s]) ') + ' or ' + _chalk2.default.inverse(' burrito --module (folder name[s] ') + '\n');
 }

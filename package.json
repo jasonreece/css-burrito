@@ -1,6 +1,6 @@
 {
   "name": "css-burrito",
-  "version": "1.6.5",
+  "version": "0.6.6",
   "description": "An organizational Sass template",
   "main": "js/src/index.js",
   "scripts": {
@@ -41,6 +41,7 @@
   "dependencies": {
     "chalk": "^1.1.3",
     "fs-extra": "^2.1.2",
+    "prompt": "^1.0.0",
     "yargs": "^7.0.2"
   },
   "devDependencies": {

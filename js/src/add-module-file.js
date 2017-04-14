@@ -21,7 +21,7 @@ function _fileText(fileName) {
 
 export default function addModuleFile() {
   const files = compareModuleFiles();
-  const notEnoughArgs = !Object.keys(files).length;
+  const notEnoughArgs = Object.keys(files).length === 0;
 
   if (notEnoughArgs) {
     notEnoughArgsErrorMessage();
@@ -34,7 +34,7 @@ export default function addModuleFile() {
   addModuleMessage(successFiles, errorFiles);
 
   successFiles.forEach((fileName) => {
-    fse.writeFileSync(path.join(config.moduleDirectoryPath(), `_${fileName}.scss`), _fileText(fileName));
+    fse.writeFileSync(path.join(config().moduleDirectoryPath(), `_${fileName}.scss`), _fileText(fileName));
   });
 
   updateModuleImportFile();

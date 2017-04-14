@@ -25,7 +25,7 @@ export default function removeModuleFile() {
   removeModuleMessage(successFiles, errorFiles);
 
   successFiles.forEach((fileName) => {
-    fse.unlinkSync(path.join(config.moduleDirectoryPath(), `_${fileName}.scss`));
+    fse.unlinkSync(path.join(config().moduleDirectoryPath(), `_${fileName}.scss`));
   });
 
   updateModuleImportFile();

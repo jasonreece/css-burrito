@@ -32,7 +32,7 @@ class Config {
     return path.join(
       this.data.pathToStyles,
       this.data.stylesDirectoryName,
-      this.data.modulesDirectoryName,
+      'modules',
     );
   }
 
@@ -40,8 +40,7 @@ class Config {
     return path.join(
       this.data.pathToStyles,
       this.data.stylesDirectoryName,
-      this.data.modulesDirectoryName,
-      this.data.modulesImportFileName,
+      'modules/_modules.scss',
     );
   }
 }
@@ -61,10 +60,12 @@ function readUserConfig(configFile) {
   return configObj;
 }
 
-const userConfig = CONFIG_TYPES.reduce((userConfigFiles, userConfigFile) => (
-  Object.assign(userConfigFiles, readUserConfig(userConfigFile))
-), CONFIG_DEFAULTS);
+function userConfig() {
+  return CONFIG_TYPES.reduce((userConfigFiles, userConfigFile) => (
+   Object.assign(userConfigFiles, readUserConfig(userConfigFile))
+ ), CONFIG_DEFAULTS);
+}
 
-const config = new Config(userConfig);
-
-export { config as default };
+export default function config() {
+  return new Config(userConfig());
+}

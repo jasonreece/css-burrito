@@ -22,5 +22,5 @@ ${moduleFilesText}
 }
 
 export default function updateModuleImportFile() {
-  fse.writeFileSync(path.join(config.moduleImportPath()), _updateModuleImportFileText());
+  fse.writeFileSync(path.join(config().moduleImportPath()), _updateModuleImportFileText());
 }

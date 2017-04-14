@@ -3,17 +3,15 @@ import fse from 'fs-extra';
 import config from '../config';
 
 function _isNotModulesImportFile(modulesImportFileName) {
-  return !modulesImportFileName.includes(config.data.modulesImportFileName);
+  return !modulesImportFileName.includes('_modules.scss');
 }
 
 // if module file exists, return a list of everything in the directory,
 // otherwise return an empty array
 export default function readModuleDirectory() {
-  const fileList = fse.existsSync(config.moduleDirectoryPath()) ?
+  return fse.existsSync(config().moduleDirectoryPath()) ?
     fse.readdirSync(
-      config.moduleDirectoryPath(),
+      config().moduleDirectoryPath(),
       (err, files) => files).filter(_isNotModulesImportFile) :
     [];
-
-  return fileList;
 }
