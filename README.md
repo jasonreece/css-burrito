@@ -47,9 +47,7 @@ If you'd like to change where the template is installed, or rename any of the ma
 "burrito": {
   pathToStyles: 'path/to/burrito',
   stylesDirectoryName: 'custom-styles-directory-name',
-  stylesFileName: 'custom-styles-file-name.scss',
-  modulesDirectoryName: 'custom-modules-directory-name',
-  modulesImportFileName: 'custom-modules-import-file-name.scss',
+  stylesFileName: 'custom-styles-file-name.scss'
 }
 ```
 
@@ -60,9 +58,7 @@ or
 {
   pathToStyles: 'path/to/burrito',
   stylesDirectoryName: 'custom-styles-directory-name',
-  stylesFileName: 'custom-styles-file-name.scss',
-  modulesDirectoryName: 'custom-modules-directory-name',
-  modulesImportFileName: 'custom-modules-import-file-name.scss',
+  stylesFileName: 'custom-styles-file-name.scss'
 }
 ```
 
